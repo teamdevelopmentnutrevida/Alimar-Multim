@@ -101,9 +101,9 @@
 			<ul class="menu_mm">
 				<li class="menu_mm"><a href="#">Home</a></li>
 				<li class="menu_mm"><a href="#">Nuevos Productos</a></li>
-				<li class="menu_mm"><a href="#">Ver mi carrito</a></li>
+				<li class="menu_mm"><a href="Carrito.aspx">Ver mi carrito</a></li>
                     <li class="menu_mm"><a href="SobreNosotros.aspx">Acerca de nosotros</a></li>
-				<li class="menu_mm"><a href="#">Administración</a></li>
+				<li class="menu_mm"><a href="Administrador.aspx">Administración</a></li>
 			</ul>
 		</nav>
 	</div>
