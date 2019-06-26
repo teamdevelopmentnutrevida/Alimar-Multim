@@ -8,8 +8,6 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
-
-
     <p class="sobreN" style="font-size: 12px; text-transform: uppercase; color: #2f2f2f; font-weight: 600; letter-spacing: 0.2em;" align="center">
         Somos una empresa familiar de diseño y confección de ropa, nuestro objetivo es mejorar día a día la
         <br />
@@ -33,8 +31,5 @@
         <br />
         y calidad, comparable con estándares internacionales de la mano con la innovación y la tecnología.
         <br />
-
-
-
 
 </asp:Content>
