@@ -17,7 +17,7 @@
         <div class="row">
             <div class="col-lg-6 mb-4">
 
-                <!-- There's only One image -->
+                <!-- There's only One image -->  
                 <div class="">
                     <div class="main-product-image">
                         <img src="https://cdnx.jumpseller.com/bootstrap/image/429446/resize/400/500?1439529839" alt="iMac Desktop Computer" class="img-fluid">
