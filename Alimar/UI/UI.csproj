@@ -1,4 +1,5 @@
-﻿<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.0\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
@@ -131,6 +132,7 @@
     <Content Include="images\trash.png" />
     <Content Include="images\Untitled-1.jpg" />
     <Content Include="images\visa.jpg" />
+    <Content Include="images\video.mp4" />
     <Content Include="InicioSesion.aspx" />
     <Content Include="js\cart_custom.js" />
     <Content Include="js\categories_custom.js" />
@@ -140,6 +142,7 @@
     <Content Include="js\jquery-3.2.1.min.js" />
     <Content Include="js\product_custom.js" />
     <Content Include="js\sweetalert28.js" />
+    <Content Include="PaginaInicio.aspx" />
     <Content Include="plugins\colorbox\colorbox.css" />
     <Content Include="plugins\colorbox\images\border.png" />
     <Content Include="plugins\colorbox\images\controls.png" />
@@ -196,6 +199,13 @@
     </Compile>
     <Compile Include="InicioSesion.aspx.designer.cs">
       <DependentUpon>InicioSesion.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="PaginaInicio.aspx.cs">
+      <DependentUpon>PaginaInicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="PaginaInicio.aspx.designer.cs">
+      <DependentUpon>PaginaInicio.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>
