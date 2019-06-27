@@ -8,7 +8,6 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
-
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="Wish shop project" />
@@ -29,7 +28,7 @@
 
         <header class="header">
             <div class="header_inner d-flex flex-row align-items-center justify-content-start">
-                <a href="Principal.aspx">
+                <a href="PaginaInicio.aspx">
                      <img width="70" src="images/Alimar-1.png" />
                 </a>
                 <nav class="main_nav">
@@ -99,7 +98,7 @@
                     <div></div>
                 </div>
             </div>
-         	<div class="logo menu_mm"><a href="#"><img src="images/alimarrec.png" /></a></div>
+         	<div class="logo menu_mm"><a href="PaginaInicio.aspx"><img src="images/alimarrec.png" /></a></div>
 		
             <nav class="menu_nav">
                 <ul class="menu_mm">
@@ -111,8 +110,6 @@
                 </ul>
             </nav>
         </div>
-
-
 
     </div>
 
