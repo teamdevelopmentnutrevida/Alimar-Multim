@@ -14,7 +14,7 @@
      <div class="container">
            <div class="row">
                    <div class="col-lg">
-                        <table class="table table-striped">
+                        <table class="table table-striped" id="tblList">
                             <thead>
                                 <tr>
                                     <th>Nombre</th>
@@ -29,6 +29,12 @@
                                     <td><a id="prec">100</a></td>
                                     <th><input type="number" id="b1" min="0" onclick="Sum('b1','prec','p1')" value="1"/></></th>
                                     <th><a id="p1">100</a></th>
+                                </tr>
+                                <tr>
+                                    <td>Articulo1</td>
+                                    <td><asp:Label runat="server" ID="prec1">100</asp:Label></td>
+                                    <th><asp:TextBox runat="server" type="number" ID="b2" min="0" CommandArgument="b2"  OnTextChanged="b2_TextChanged" value="1"/></></th>
+                                    <th><asp:Label runat="server"  ID="p2">100</asp:Label></th>
                                 </tr>
                                  <asp:Literal runat="server" ID="litTabla"></asp:Literal>
                             </tbody>
