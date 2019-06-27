@@ -74,7 +74,6 @@
     <Content Include="images\20190620_091344.jpg" />
     <Content Include="images\Alimar-1.png" />
     <Content Include="images\alimarrec.png" />
-    <Content Include="images\vide.mp4" />
     <Content Include="images\arrow_r.png" />
     <Content Include="images\avatar.svg" />
     <Content Include="images\best_1.jpg" />
@@ -139,8 +138,8 @@
     <Content Include="images\testimonials.jpg" />
     <Content Include="images\trash.png" />
     <Content Include="images\Untitled-1.jpg" />
-    <Content Include="images\visa.jpg" />
     <Content Include="images\video.mp4" />
+    <Content Include="images\visa.jpg" />
     <Content Include="InicioSesion.aspx" />
     <Content Include="js\cart_custom.js" />
     <Content Include="js\categories_custom.js" />
@@ -182,9 +181,11 @@
     <Content Include="plugins\parallax-js-master\parallax.min.js" />
     <Content Include="plugins\scrollmagic\ScrollMagic.min.js" />
     <Content Include="Producto.aspx" />
+    <Content Include="RopaAlimar\blusa.jpg" />
     <Content Include="RopaAlimar\BlusaNiña.jpeg" />
     <Content Include="RopaAlimar\CamisaHombre.jpeg" />
     <Content Include="RopaAlimar\CamisaNiño.jpeg" />
+    <Content Include="RopaAlimar\deport.jpg" />
     <Content Include="RopaAlimar\PantalonHombre.jpeg" />
     <Content Include="RopaAlimar\PantalonMujer.jpg" />
     <Content Include="RopaAlimar\PantalonNiña.jpg" />
@@ -195,6 +196,7 @@
     <Content Include="RopaAlimar\ShortNiño.jpeg" />
     <Content Include="RopaAlimar\TrajeBaño1.jpg" />
     <Content Include="RopaAlimar\TrajeBaño2.jpeg" />
+    <Content Include="RopaAlimar\vestido.jpg" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="SobreNosotros.aspx" />
