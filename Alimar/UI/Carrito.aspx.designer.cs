@@ -13,12 +13,30 @@ namespace UI {
     public partial class Carrito {
         
         /// <summary>
-        /// lbl control.
+        /// litTabla control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lbl;
+        protected global::System.Web.UI.WebControls.Literal litTabla;
+        
+        /// <summary>
+        /// btnAP control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAP;
+        
+        /// <summary>
+        /// btnCanc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnCanc;
     }
 }
