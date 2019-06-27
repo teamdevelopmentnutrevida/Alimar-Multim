@@ -8,11 +8,11 @@ namespace BL
 {
     public class articulo
     {
-        //permite crear un objeto de articulo
+        //permite crear un objeto de articulo  
 
         public articulo(string tipo, string path, string genero, int edad, string descipcion, int precio, string nombre)
         {
-            this.tipo = tipo;
+            this.tipo = tipo;  
             this.path = path;
             this.genero = genero;
             this.edad = edad;
