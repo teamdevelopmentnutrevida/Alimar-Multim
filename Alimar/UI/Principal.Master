@@ -26,10 +26,11 @@
 
 </head>
 <body>
+     <form runat="server">
     <div class="super_container">
 
         <!-- Header -->
-
+       
         <header class="header">
             <div class="header_inner d-flex flex-row align-items-center justify-content-start">
                 <a href="PaginaInicio.aspx">
@@ -51,7 +52,7 @@
 
                         <li><a>Buscar</a></li>
                         <li>
-                            <form runat="server">  <asp:TextBox style="width: 300px" class="form-control" ID="TextBox1" runat="server" placeholder="Buscando.." OnTextChanged="TextBox1_TextChanged" ></asp:TextBox></form>
+                              <asp:TextBox style="width: 300px" class="form-control" ID="TextBox1" runat="server" placeholder="Buscando.." OnTextChanged="TextBox1_TextChanged" ></asp:TextBox>
                           
                     </ul>
 
@@ -140,7 +141,7 @@
         </asp:ContentPlaceHolder>
     </div>
 
-
+    </form>
     <!-- Footer -->
 
     <footer class="footer">
