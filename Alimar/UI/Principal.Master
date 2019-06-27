@@ -30,7 +30,7 @@
 	<header class="header">
 		<div class="header_inner d-flex flex-row align-items-center justify-content-start">
                 <a href="Principal.aspx">
-                    <img src="images/alimarrec.png" />
+                    <img width="70" src="images/Alimar-1.png" />
                 </a>
 			<nav class="main_nav">
 				<ul>
