@@ -8,6 +8,15 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
 
+	<div class="container">
+    <div class="row">
+		<div class="col-md-1"></div>
+	<div class="col-md-7">
+		<img width="1000" height="500" src="RopaAlimar/sobreNosotros.jpg" />
+	</div>
+    </div>
+</div>
+	<br /><br /><br />
     <p class="sobreN" style="font-size: 12px; text-transform: uppercase; color: #2f2f2f; font-weight: 600; letter-spacing: 0.2em;" align="center">
         Somos una empresa familiar de diseño y confección de ropa, nuestro objetivo es mejorar día a día la
         <br />
@@ -31,5 +40,19 @@
         <br />
         y calidad, comparable con estándares internacionales de la mano con la innovación y la tecnología.
         <br />
+        <br/>
+    </p>
+    <h3 class="sobreN" style="font-size: 20px; text-transform: uppercase; color: #2f2f2f; font-weight: 600; letter-spacing: 0.2em;" align="center">Historia</h3>
+
+    <p class="sobreN" style="font-size: 12px; text-transform: uppercase; color: #2f2f2f; font-weight: 600; letter-spacing: 0.2em;" align="center">
+        Nuestra emmpresa   
+        <br />
+        <br/>
+    </p>
+
+
+
+
+
 
 </asp:Content>

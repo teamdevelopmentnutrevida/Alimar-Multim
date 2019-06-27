@@ -8,7 +8,6 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
-
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="Wish shop project" />
@@ -67,7 +66,7 @@
                     </div>
                     <div class="shopping">
                         <!-- Cart -->
-                        <a href="#">
+                        <a href="Carrito.aspx">
                             <div class="cart">
                                 <img src="images/shopping-bag.svg" alt="">
                                 <div class="cart_num_container">
@@ -79,7 +78,7 @@
                         </a>
 
                         <!-- Avatar -->
-                        <a href="#">
+                        <a href="Administrador.aspx">
                             <div class="avatar">
                                 <img src="images/avatar.svg" alt="">
                             </div>
@@ -104,11 +103,11 @@
                     <div></div>
                 </div>
             </div>
-         	<div class="logo menu_mm"><a href="#"><img src="images/alimarrec.png" /></a></div>
+         	<div class="logo menu_mm"><a href="PaginaInicio.aspx"><img src="images/alimarrec.png" /></a></div>
 		
             <nav class="menu_nav">
                 <ul class="menu_mm">
-                    <li class="menu_mm"><a href="#">Home</a></li>
+                    <li class="menu_mm"><a href="PaginaInicio.aspx">Home</a></li>
                     <li class="menu_mm"><a href="#">Nuevos Productos</a></li>
                     <li class="menu_mm"><a href="Carrito.aspx">Ver mi carrito</a></li>
                     <li class="menu_mm"><a href="SobreNosotros.aspx">Acerca de nosotros</a></li>
@@ -116,8 +115,6 @@
                 </ul>
             </nav>
         </div>
-
-
 
     </div>
 
