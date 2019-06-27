@@ -47,7 +47,7 @@
 					<div class="promo_item">
 						<div class="promo_image">
 							<img src="RopaAlimar/vestido.jpg" alt="">
-							<div class="promo_content promo_content_2">
+							<div class="promo_content promo_content_1">
 								<div class="promo_title">-30% desc</div>
 								<div class="promo_subtitle">Vestidos</div>
 							</div>
@@ -61,7 +61,7 @@
 					<div class="promo_item">
 						<div class="promo_image">
 							<img src="RopaAlimar/deport.jpg" alt="">
-							<div class="promo_content promo_content_3">
+							<div class="promo_content promo_content_1">
 								<div class="promo_title">-25% desc</div>
 								<div class="promo_subtitle">Deportiva</div>
 							</div>
