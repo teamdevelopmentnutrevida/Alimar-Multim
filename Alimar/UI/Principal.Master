@@ -21,6 +21,9 @@
     <link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css" />
     <link rel="stylesheet" type="text/css" href="styles/responsive.css" />
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
 </head>
 <body>
     <div class="super_container">
@@ -39,10 +42,10 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Buscadores</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="Busqueda.aspx?Valor=Mujer">Mujer</a>
-                                <a class="dropdown-item" href="Busqueda.aspx?Valor=Hombre">Hombre</a>
-                                <a class="dropdown-item" href="Busqueda.aspx?Valor=Niño">Niño</a>
-                                <a class="dropdown-item" href="Busqueda.aspx?Valor=Niña">Niña</a>
+                                <a class="dropdown-item" href="Mujer.aspx">Mujer</a>
+                                <a class="dropdown-item" href="Hombre.aspx">Hombre</a>
+                                <a class="dropdown-item" href="Nino.aspx">Niño</a>
+                                <a class="dropdown-item" href="Nina.aspx">Niña</a>
                             </div>
                         </li>
 
@@ -100,20 +103,14 @@
                 </div>
             </div>
          	<div class="logo menu_mm"><a href="#"><img src="images/alimarrec.png" /></a></div>
-		<div class="search">
-			<form action="#">
-                    <input type="search" class="search_input menu_mm" required="required" />
-                    <button type="submit" id="search_button_menu" class="search_button menu_mm">
-                        <img class="menu_mm" src="images/magnifying-glass.svg" alt=""></button>
-                </form>
-            </div>
+		
             <nav class="menu_nav">
                 <ul class="menu_mm">
                     <li class="menu_mm"><a href="#">Home</a></li>
                     <li class="menu_mm"><a href="#">Nuevos Productos</a></li>
                     <li class="menu_mm"><a href="Carrito.aspx">Ver mi carrito</a></li>
                     <li class="menu_mm"><a href="SobreNosotros.aspx">Acerca de nosotros</a></li>
-                    <li class="menu_mm"><a href="Administrador.aspx">Administración</a></li>
+                    <li class="menu_mm"><a href="InicioSesion.aspx">Administración</a></li>
                 </ul>
             </nav>
         </div>

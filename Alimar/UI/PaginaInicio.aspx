@@ -8,7 +8,7 @@
 		<div class="col-md-1"></div>
 	<div class="col-md-7">
 		<video width="1000" autoplay="autoplay" controls="controls">
-			<source type="video/mp4" src="images/vide.flv" />
+			<source type="video/mp4" src="images/VideoOficial.mp4" />
 		</video>
 	</div>
     </div>
@@ -60,7 +60,7 @@
 				<div class="col-lg-4 promo_col">
 					<div class="promo_item">
 						<div class="promo_image">
-							<img src="RopaAlimar/deport.jpg" alt="">
+							<img src="RopaAlimar/deportiva 1.jpg" alt="">
 							<div class="promo_content promo_content_1">
 								<div class="promo_title">-25% desc</div>
 								<div class="promo_subtitle">Deportiva</div>

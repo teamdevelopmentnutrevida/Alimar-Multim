@@ -69,9 +69,10 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Administrador.aspx" />
-    <Content Include="Busqueda.aspx" />
+    <Content Include="Blusa.aspx" />
     <Content Include="Carrito.aspx" />
-    <Content Include="images\20190620_091344.jpg" />
+    <Content Include="Deportiva.aspx" />
+    <Content Include="Hombre.aspx" />
     <Content Include="images\Alimar-1.png" />
     <Content Include="images\alimarrec.png" />
     <Content Include="images\arrow_r.png" />
@@ -89,6 +90,7 @@
     <Content Include="images\contact_info_1.png" />
     <Content Include="images\contact_info_2.png" />
     <Content Include="images\contact_info_3.png" />
+    <Content Include="images\deport.jpg" />
     <Content Include="images\down.png" />
     <Content Include="images\extra_1.jpg" />
     <Content Include="images\extra_2.jpg" />
@@ -138,7 +140,7 @@
     <Content Include="images\testimonials.jpg" />
     <Content Include="images\trash.png" />
     <Content Include="images\Untitled-1.jpg" />
-    <Content Include="images\video.mp4" />
+    <Content Include="images\VideoOficial.mp4" />
     <Content Include="images\visa.jpg" />
     <Content Include="InicioSesion.aspx" />
     <Content Include="js\cart_custom.js" />
@@ -149,7 +151,12 @@
     <Content Include="js\jquery-3.2.1.min.js" />
     <Content Include="js\product_custom.js" />
     <Content Include="js\sweetalert28.js" />
+    <Content Include="Mujer.aspx" />
+    <Content Include="Nina.aspx" />
+    <Content Include="Nino.aspx" />
     <Content Include="PaginaInicio.aspx" />
+    <Content Include="Pantalon.aspx" />
+    <Content Include="Pijama.aspx" />
     <Content Include="plugins\colorbox\colorbox.css" />
     <Content Include="plugins\colorbox\images\border.png" />
     <Content Include="plugins\colorbox\images\controls.png" />
@@ -185,20 +192,25 @@
     <Content Include="RopaAlimar\BlusaNiña.jpeg" />
     <Content Include="RopaAlimar\CamisaHombre.jpeg" />
     <Content Include="RopaAlimar\CamisaNiño.jpeg" />
-    <Content Include="RopaAlimar\deport.jpg" />
+    <Content Include="RopaAlimar\deportiva 1.jpg" />
+    <Content Include="RopaAlimar\deportiva 2.jpg" />
     <Content Include="RopaAlimar\PantalonHombre.jpeg" />
     <Content Include="RopaAlimar\PantalonMujer.jpg" />
     <Content Include="RopaAlimar\PantalonNiña.jpg" />
     <Content Include="RopaAlimar\PantalonNiño.jpg" />
+    <Content Include="RopaAlimar\Pijama1.jpg" />
+    <Content Include="RopaAlimar\Pijama2.jpg" />
     <Content Include="RopaAlimar\ShortHombre.jpeg" />
     <Content Include="RopaAlimar\shortMujer.jpg" />
     <Content Include="RopaAlimar\ShortNiña.jpeg" />
     <Content Include="RopaAlimar\ShortNiño.jpeg" />
     <Content Include="RopaAlimar\TrajeBaño1.jpg" />
     <Content Include="RopaAlimar\TrajeBaño2.jpeg" />
+    <Content Include="RopaAlimar\vestido 2.jpg" />
     <Content Include="RopaAlimar\vestido.jpg" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
+    <Content Include="Short.aspx" />
     <Content Include="SobreNosotros.aspx" />
     <Content Include="styles\bootstrap4\bootstrap.min.css" />
     <Content Include="styles\bootstrap4\bootstrap.min.js" />
@@ -215,6 +227,8 @@
     <Content Include="styles\product.css" />
     <Content Include="styles\product_responsive.css" />
     <Content Include="styles\responsive.css" />
+    <Content Include="Traje.aspx" />
+    <Content Include="Vestido.aspx" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -225,12 +239,12 @@
     <Compile Include="Administrador.aspx.designer.cs">
       <DependentUpon>Administrador.aspx</DependentUpon>
     </Compile>
-    <Compile Include="Busqueda.aspx.cs">
-      <DependentUpon>Busqueda.aspx</DependentUpon>
+    <Compile Include="Blusa.aspx.cs">
+      <DependentUpon>Blusa.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Busqueda.aspx.designer.cs">
-      <DependentUpon>Busqueda.aspx</DependentUpon>
+    <Compile Include="Blusa.aspx.designer.cs">
+      <DependentUpon>Blusa.aspx</DependentUpon>
     </Compile>
     <Compile Include="Carrito.aspx.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
@@ -239,6 +253,20 @@
     <Compile Include="Carrito.aspx.designer.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Deportiva.aspx.cs">
+      <DependentUpon>Deportiva.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Deportiva.aspx.designer.cs">
+      <DependentUpon>Deportiva.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Hombre.aspx.cs">
+      <DependentUpon>Hombre.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Hombre.aspx.designer.cs">
+      <DependentUpon>Hombre.aspx</DependentUpon>
+    </Compile>
     <Compile Include="InicioSesion.aspx.cs">
       <DependentUpon>InicioSesion.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -246,12 +274,47 @@
     <Compile Include="InicioSesion.aspx.designer.cs">
       <DependentUpon>InicioSesion.aspx</DependentUpon>
     </Compile>
+    <Compile Include="Mujer.aspx.cs">
+      <DependentUpon>Mujer.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Mujer.aspx.designer.cs">
+      <DependentUpon>Mujer.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nina.aspx.cs">
+      <DependentUpon>Nina.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nina.aspx.designer.cs">
+      <DependentUpon>Nina.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Nino.aspx.cs">
+      <DependentUpon>Nino.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Nino.aspx.designer.cs">
+      <DependentUpon>Nino.aspx</DependentUpon>
+    </Compile>
     <Compile Include="PaginaInicio.aspx.cs">
       <DependentUpon>PaginaInicio.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="PaginaInicio.aspx.designer.cs">
       <DependentUpon>PaginaInicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pantalon.aspx.cs">
+      <DependentUpon>Pantalon.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pantalon.aspx.designer.cs">
+      <DependentUpon>Pantalon.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pijama.aspx.cs">
+      <DependentUpon>Pijama.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pijama.aspx.designer.cs">
+      <DependentUpon>Pijama.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>
@@ -268,12 +331,33 @@
       <DependentUpon>Producto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Short.aspx.cs">
+      <DependentUpon>Short.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Short.aspx.designer.cs">
+      <DependentUpon>Short.aspx</DependentUpon>
+    </Compile>
     <Compile Include="SobreNosotros.aspx.cs">
       <DependentUpon>SobreNosotros.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="SobreNosotros.aspx.designer.cs">
       <DependentUpon>SobreNosotros.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Traje.aspx.cs">
+      <DependentUpon>Traje.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Traje.aspx.designer.cs">
+      <DependentUpon>Traje.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Vestido.aspx.cs">
+      <DependentUpon>Vestido.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Vestido.aspx.designer.cs">
+      <DependentUpon>Vestido.aspx</DependentUpon>
     </Compile>
   </ItemGroup>
   <ItemGroup>

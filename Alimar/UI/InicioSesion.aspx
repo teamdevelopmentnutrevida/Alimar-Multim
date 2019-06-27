@@ -136,70 +136,43 @@ span.psw {
     </script>
         
   
-
-    <%--<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Inicio Sesión</button>--%>
-
-<div id="id01" class="modal">
+	<div class="container">
+    <div class="row">
+        <div class="col-sm-4"></div>
+        <div class="col-sm-4" style="background-color:#f1f1f1">
+			<div>
   
-  <form class="modal-content animate" action="/action_page.php" runat="server">
+  <form  runat="server">
     <div class="imgcontainer">
-      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Cerrar Modal">&times;</span>
-      <h3>Bienvenido</h3>
+       <h3>Bienvenido</h3>
     </div>
 
     <div class="container">
       <label for="uname"><b>Usuario</b></label>
-      <input type="text" placeholder="Correo" name="uname" id="txtCorreo"/>
+		<asp:TextBox ID="txtCorr" placeholder="Correo" runat="server"></asp:TextBox>
 
       <label for="psw"><b>Contraseña</b></label>
-      <asp:TextBox runat="server" type="password" placeholder="Contraseña" name="psw" ID="txtContras"></asp:TextBox>
-      <button type="submit" onclick="Ingresar()">Login</button>
-      <%--<asp:Button runat="server"  OnClick="btnIngresar_Click" Text="Ingresar"></asp:Button>--%>
-      <label>
+      <asp:TextBox runat="server" type="password" placeholder="Contraseña" ID="txtContras"></asp:TextBox>
+		<asp:Button CssClass="btn btn-success" ID="btnIngresar" runat="server" Text="Ingresar" OnClick="btnIngresar_Click" />
+     <br /><br />
+		 <label>
         <input type="checkbox" checked="checked" name="remember"/> Recuerdame
       </label>
     </div>
 
     <div class="container" style="background-color:#f1f1f1">
-      <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+		<asp:Button ID="Button1" onclick="btnCancel_Click" runat="server" CssClass="btn btn-danger" Text="Cancelar" />
+    
       <span class="psw">Olvidó la <a href="#">contraseña?</a></span>
     </div>
   </form>
 </div>
+        </div>
+        <div class="col-sm-4"></div>
+    </div>
+</div>
+  
 
-     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-     <script>
 
-         function Ingresar() {
-             var num = document.getElementById("txtCorreo").value;
-             alert("Entro" + num);
-             $.ajax({
-                 type: "POST",
-                 url: '../InicioSesion.aspx/btnIngresar_Click',
-                 data: '{correo:' + num + '}',
-                 contentType: "application/json; charset=utf-8",
-                 dataType: "json",
-                 async: true,
-                 success: function () {
-                     alert("funciono");
-                    location.href = "Administrador.aspx";
-                 },
-                 error: function () {
-                    alert("No funciona");
-                 }
-             });
-         }
-    </script>
     
-<script>
-    // Get the modal
-    var modal = document.getElementById('id01');
-
-    // When the user clicks anywhere outside of the modal, close it
-    window.onclick = function(event) {
-        if (event.target == modal) {
-            modal.style.display = "none";
-        }
-    }
-</script>
 </asp:Content>
