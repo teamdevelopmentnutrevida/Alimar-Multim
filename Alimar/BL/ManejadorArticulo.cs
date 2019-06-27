@@ -8,7 +8,7 @@ namespace BL
 {
     public class ManejadorArticulo
     {
-        public List<articulo> traerLista() {
+        public List<articulo> traerLista() {  
             List<articulo> lista = new List<articulo>();
 
             //blusas camiseta

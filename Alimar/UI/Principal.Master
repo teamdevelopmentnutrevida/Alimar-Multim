@@ -34,9 +34,9 @@
                 </a>
 			<nav class="main_nav">
 				<ul>
-					<li><a href="#">Home</a></li>
+					<li><a href="PaginaInicio.aspx">Home</a></li>
 					<li><a href="categories.html">Categorías</a></li>
-					<li><a href="#">Buscar</a></li>
+					<li><a>Buscar</a></li>
                         <li>
                             <input style="width: 300px" class="form-control" id="myInput" type="text" placeholder="Buscando.." /></li>
 				</ul>
