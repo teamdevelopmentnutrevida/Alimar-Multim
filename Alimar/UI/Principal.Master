@@ -32,7 +32,7 @@
 
         <header class="header">
             <div class="header_inner d-flex flex-row align-items-center justify-content-start">
-                <a href="Principal.aspx">
+                <a href="PaginaInicio.aspx">
                      <img width="70" src="images/Alimar-1.png" />
                 </a>
                 <nav class="main_nav">
@@ -51,7 +51,8 @@
 
                         <li><a>Buscar</a></li>
                         <li>
-                            <input style="width: 300px" class="form-control" id="myInput" type="text" placeholder="Buscando.." /></li>
+                            <form runat="server">  <asp:TextBox style="width: 300px" class="form-control" ID="TextBox1" runat="server" placeholder="Buscando.." OnTextChanged="TextBox1_TextChanged" ></asp:TextBox></form>
+                          
                     </ul>
 
                 </nav>
