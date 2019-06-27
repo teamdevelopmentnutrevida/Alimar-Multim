@@ -30,7 +30,7 @@
 	<header class="header">
 		<div class="header_inner d-flex flex-row align-items-center justify-content-start">
                 <a href="Principal.aspx">
-                    <img src="images/logo.png" />
+                    <img src="images/alimarrec.png" />
                 </a>
 			<nav class="main_nav">
 				<ul>
@@ -89,7 +89,7 @@
                     <div></div>
                 </div>
             </div>
-		<div class="logo menu_mm"><a href="#">Alimar</a></div>
+		<div class="logo menu_mm"><a href="#"><img src="images/alimarrec.png" /></a></div>
 		<div class="search">
 			<form action="#">
                     <input type="search" class="search_input menu_mm" required="required" />
