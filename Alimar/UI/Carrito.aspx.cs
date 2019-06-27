@@ -47,7 +47,13 @@ namespace UI
             Response.Redirect("PaginaInicio");
         }
 
-      
+        protected void b2_TextChanged(object sender, EventArgs e)
+        {
+            TextBox txt = (TextBox)sender;
+            string commandArg = txt.Attributes["CommandArgument"].ToString();
+            int cant = Int32.Parse(commandArg);
+        }
+
     }
     
 }
