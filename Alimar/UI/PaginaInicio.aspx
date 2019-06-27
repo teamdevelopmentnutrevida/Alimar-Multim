@@ -9,6 +9,4 @@
 			<source type="video/mp4" src="images/video.mp4" />
 		</video>
 	</div>
-
-
 </asp:Content>
