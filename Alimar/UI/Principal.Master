@@ -21,6 +21,9 @@
     <link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css" />
     <link rel="stylesheet" type="text/css" href="styles/responsive.css" />
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
 </head>
 <body>
     <div class="super_container">
@@ -29,8 +32,8 @@
 
         <header class="header">
             <div class="header_inner d-flex flex-row align-items-center justify-content-start">
-                <a href="Principal.aspx">
-                    <img src="images/logo.png" />
+                <a href="PaginaInicio.aspx">
+                     <img width="70" src="images/Alimar-1.png" />
                 </a>
                 <nav class="main_nav">
                     <ul>
@@ -39,27 +42,17 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Buscadores</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="http://www.google.com">Google</a>
-                                <a class="dropdown-item" href="http://www.bing.com">Bing</a>
-                                <a class="dropdown-item" href="http://www.yahoo.com">Yahoo</a>
+                                <a class="dropdown-item" href="Mujer.aspx">Mujer</a>
+                                <a class="dropdown-item" href="Hombre.aspx">Hombre</a>
+                                <a class="dropdown-item" href="Nino.aspx">Niño</a>
+                                <a class="dropdown-item" href="Nina.aspx">Niña</a>
                             </div>
                         </li>
 
-                        <%--<div class="dropdown">
-                            <button type="button" data-toggle="dropdown" style="font-size: 12px; text-transform: uppercase; color: #2f2f2f; font-weight: 500; letter-spacing: 0.2em;">
-                                Ejemplo
-                            </button>
-
-                            <ul class="dropdown-menu">
-                                <li><a href="#">HTML</a></li>
-                                <li><a href="#">CSS</a></li>
-                                <li><a href="#">JavaScript</a></li>
-                            </ul>
-                        </div>--%>
-
                         <li><a>Buscar</a></li>
                         <li>
-                            <input style="width: 300px" class="form-control" id="myInput" type="text" placeholder="Buscando.." /></li>
+                            <form runat="server">  <asp:TextBox style="width: 300px" class="form-control" ID="TextBox1" runat="server" placeholder="Buscando.." OnTextChanged="TextBox1_TextChanged" ></asp:TextBox></form>
+                          
                     </ul>
 
                 </nav>
@@ -110,21 +103,15 @@
                     <div></div>
                 </div>
             </div>
-            <div class="logo menu_mm"><a href="#">Alimar</a></div>
-            <div class="search">
-                <form action="#">
-                    <input type="search" class="search_input menu_mm" required="required" />
-                    <button type="submit" id="search_button_menu" class="search_button menu_mm">
-                        <img class="menu_mm" src="images/magnifying-glass.svg" alt=""></button>
-                </form>
-            </div>
+         	<div class="logo menu_mm"><a href="#"><img src="images/alimarrec.png" /></a></div>
+		
             <nav class="menu_nav">
                 <ul class="menu_mm">
                     <li class="menu_mm"><a href="#">Home</a></li>
                     <li class="menu_mm"><a href="#">Nuevos Productos</a></li>
                     <li class="menu_mm"><a href="Carrito.aspx">Ver mi carrito</a></li>
                     <li class="menu_mm"><a href="SobreNosotros.aspx">Acerca de nosotros</a></li>
-                    <li class="menu_mm"><a href="Administrador.aspx">Administración</a></li>
+                    <li class="menu_mm"><a href="InicioSesion.aspx">Administración</a></li>
                 </ul>
             </nav>
         </div>
@@ -163,13 +150,23 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <div class="footer_logo"><a href="#">Alimar</a></div>
+                    
+						<div class="footer_social">
+						<ul>
+							<li><a href="https://www.pinterest.com/login/"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+							<li><a href="https://cr.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
 
-                    <div class="footer_social">
-                        <ul>
-                            <h3>Contáctenos: 86760411, alimar061267@gmail.com</h3>
-                        </ul>
-                    </div>
+                   <div class="footer_social">
+						<ul>
+							<li><a href="SobreNosotros.aspx">Sobre Nosotros</li>
+							<li><a>Contáctenos: +506 86760411, alimar061267@gmail.com</a></li>
+						</ul>
+					</div>
+
                     <div class="copyright">
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script>
