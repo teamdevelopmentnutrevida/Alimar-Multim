@@ -181,7 +181,7 @@ span.psw {
                  async: true,
                  success: function () {
                      alert("funciono");
-                    location.href = "Carrito.aspx";
+                    location.href = "Administrador.aspx";
                  },
                  error: function () {
                     alert("No funciona");
