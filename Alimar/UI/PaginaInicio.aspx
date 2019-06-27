@@ -8,7 +8,7 @@
 		<div class="col-md-1"></div>
 	<div class="col-md-7">
 		<video width="1000" autoplay="autoplay" controls="controls">
-			<source type="video/mp4" src="images/vide.mp4" />
+			<source type="video/mp4" src="images/video.mp4" />
 		</video>
 	</div>
     </div>
