@@ -39,10 +39,10 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Buscadores</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="Busqueda.aspx?Valor=Mujer">Mujer</a>
-                                <a class="dropdown-item" href="Busqueda.aspx?Valor=Hombre">Hombre</a>
-                                <a class="dropdown-item" href="Busqueda.aspx?Valor=Niño">Niño</a>
-                                <a class="dropdown-item" href="Busqueda.aspx?Valor=Niña">Niña</a>
+                                <a class="dropdown-item" href="Mujer.aspx">Mujer</a>
+                                <a class="dropdown-item" href="Hombre.aspx">Hombre</a>
+                                <a class="dropdown-item" href="Nino.aspx">Niño</a>
+                                <a class="dropdown-item" href="Nina.aspx">Niña</a>
                             </div>
                         </li>
 

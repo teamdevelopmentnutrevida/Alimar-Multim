@@ -12,7 +12,7 @@ namespace BL
             List<articulo> lista = new List<articulo>();
 
             //blusas camiseta
-            articulo blusa1 = new articulo("blusa", "path", "mujer", 10, "Blusa blanca, con lacitos", 5000, "Blusa de niña");
+            articulo blusa1 = new articulo("blusa", "RopaAlimar/blusa.jpg", "mujer", 10, "Blusa blanca, con lacitos", 5000, "Blusa de niña");
             articulo blusa2 = new articulo("blusa", "path", "mujer", 30, "Blusa blaca con tema de verano", 7000, "Blusa de mujer");
             articulo camisa1 = new articulo("camisa", "path", "hombre", 10, "Camisa blanca con rayas azules", 5000, "Camisa de niño");
             articulo camisa2 = new articulo("camisa", "path", "hombre", 30, "Camisa roja de manga larga", 7000, "Camisa de hombre");
