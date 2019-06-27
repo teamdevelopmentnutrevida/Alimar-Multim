@@ -30,7 +30,7 @@
         <header class="header">
             <div class="header_inner d-flex flex-row align-items-center justify-content-start">
                 <a href="Principal.aspx">
-                    <img src="images/logo.png" />
+                     <img width="70" src="images/Alimar-1.png" />
                 </a>
                 <nav class="main_nav">
                     <ul>
@@ -99,9 +99,9 @@
                     <div></div>
                 </div>
             </div>
-            <div class="logo menu_mm"><a href="#">Alimar</a></div>
-            <div class="search">
-                <form action="#">
+         	<div class="logo menu_mm"><a href="#"><img src="images/alimarrec.png" /></a></div>
+		<div class="search">
+			<form action="#">
                     <input type="search" class="search_input menu_mm" required="required" />
                     <button type="submit" id="search_button_menu" class="search_button menu_mm">
                         <img class="menu_mm" src="images/magnifying-glass.svg" alt=""></button>
@@ -149,13 +149,23 @@
         <div class="container">
             <div class="row">
                 <div class="col text-center">
-                    <div class="footer_logo"><a href="#">Alimar</a></div>
+                    
+						<div class="footer_social">
+						<ul>
+							<li><a href="https://www.pinterest.com/login/"><i class="fa fa-pinterest" aria-hidden="true"></i></a></li>
+							<li><a href="https://cr.linkedin.com/"><i class="fa fa-linkedin" aria-hidden="true"></i></a></li>
+							<li><a href="https://www.instagram.com/"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+							<li><a href="https://twitter.com/"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+						</ul>
+					</div>
 
-                    <div class="footer_social">
-                        <ul>
-                            <h3>Contáctenos: 86760411, alimar061267@gmail.com</h3>
-                        </ul>
-                    </div>
+                   <div class="footer_social">
+						<ul>
+							<li><a href="SobreNosotros.aspx">Sobre Nosotros</li>
+							<li><a>Contáctenos: +506 86760411, alimar061267@gmail.com</a></li>
+						</ul>
+					</div>
+
                     <div class="copyright">
                         <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
                         Copyright &copy;<script>document.write(new Date().getFullYear());</script>

@@ -174,12 +174,13 @@ span.psw {
              alert("Entro" + num);
              $.ajax({
                  type: "POST",
-                 url: 'InicioSesion.aspx/btnIngresar_Click',
+                 url: '../InicioSesion.aspx/btnIngresar_Click',
                  data: '{correo:' + num + '}',
                  contentType: "application/json; charset=utf-8",
                  dataType: "json",
                  async: true,
                  success: function () {
+                     alert("funciono");
                     location.href = "Administrador.aspx";
                  },
                  error: function () {
