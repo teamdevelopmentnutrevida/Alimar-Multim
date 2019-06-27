@@ -71,6 +71,10 @@
     <Content Include="Administrador.aspx" />
     <Content Include="Busqueda.aspx" />
     <Content Include="Carrito.aspx" />
+    <Content Include="images\20190620_091344.jpg" />
+    <Content Include="images\Alimar-1.png" />
+    <Content Include="images\alimarrec.png" />
+    <Content Include="images\vide.mp4" />
     <Content Include="images\arrow_r.png" />
     <Content Include="images\avatar.svg" />
     <Content Include="images\best_1.jpg" />
@@ -221,7 +225,6 @@
     </Compile>
     <Compile Include="Busqueda.aspx.cs">
       <DependentUpon>Busqueda.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="Busqueda.aspx.designer.cs">
       <DependentUpon>Busqueda.aspx</DependentUpon>
