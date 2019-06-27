@@ -70,6 +70,8 @@
   <ItemGroup>
     <Content Include="Administrador.aspx" />
     <Content Include="Carrito.aspx" />
+    <Content Include="images\20190620_091344.jpg" />
+    <Content Include="images\vide.mp4" />
     <Content Include="images\arrow_r.png" />
     <Content Include="images\avatar.svg" />
     <Content Include="images\best_1.jpg" />
