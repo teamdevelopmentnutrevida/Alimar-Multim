@@ -13,15 +13,6 @@ namespace UI {
     public partial class InicioSesion {
         
         /// <summary>
-        /// txtCorreo control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtCorreo;
-        
-        /// <summary>
         /// txtContras control.
         /// </summary>
         /// <remarks>

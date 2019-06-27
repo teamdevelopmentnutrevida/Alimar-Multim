@@ -148,7 +148,7 @@ span.psw {
 
     <div class="container">
       <label for="uname"><b>Usuario</b></label>
-      <asp:TextBox runat="server" type="text" placeholder="Correo" name="uname" ID="txtCorreo"></asp:TextBox>
+      <input type="text" placeholder="Correo" name="uname" id="txtCorreo"/>
 
       <label for="psw"><b>Contraseña</b></label>
       <asp:TextBox runat="server" type="password" placeholder="Contraseña" name="psw" ID="txtContras"></asp:TextBox>
@@ -166,13 +166,15 @@ span.psw {
   </form>
 </div>
 
+     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
      <script>
+
          function Ingresar() {
-             alert("Entro");
-             num = document.getElementById('txtCorreo');
+             var num = document.getElementById("txtCorreo").value;
+             alert("Entro" + num);
              $.ajax({
                  type: "POST",
-                 url: '/InicioSesion.aspx/Redirigir_Click',
+                 url: 'InicioSesion.aspx/btnIngresar_Click',
                  data: '{correo:' + num + '}',
                  contentType: "application/json; charset=utf-8",
                  dataType: "json",

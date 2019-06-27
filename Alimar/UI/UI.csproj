@@ -178,6 +178,17 @@
     <Content Include="plugins\parallax-js-master\parallax.min.js" />
     <Content Include="plugins\scrollmagic\ScrollMagic.min.js" />
     <Content Include="Producto.aspx" />
+    <Content Include="RopaAlimar\BlusaNiña.jpeg" />
+    <Content Include="RopaAlimar\CamisaHombre.jpeg" />
+    <Content Include="RopaAlimar\CamisaNiño.jpeg" />
+    <Content Include="RopaAlimar\PantalonHombre.jpeg" />
+    <Content Include="RopaAlimar\PantalonMujer.jpg" />
+    <Content Include="RopaAlimar\PantalonNiña.jpg" />
+    <Content Include="RopaAlimar\PantalonNiño.jpg" />
+    <Content Include="RopaAlimar\ShortHombre.jpeg" />
+    <Content Include="RopaAlimar\shortMujer.jpg" />
+    <Content Include="RopaAlimar\ShortNiña.jpeg" />
+    <Content Include="RopaAlimar\ShortNiño.jpeg" />
     <Content Include="scripts\ai.0.15.0-build58334.js" />
     <Content Include="scripts\ai.0.15.0-build58334.min.js" />
     <Content Include="SobreNosotros.aspx" />
@@ -310,9 +321,7 @@
       <Name>BL</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="RopaAlimar\" />
-  </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
