@@ -174,13 +174,14 @@ span.psw {
              alert("Entro" + num);
              $.ajax({
                  type: "POST",
-                 url: 'InicioSesion.aspx/btnIngresar_Click',
+                 url: '../InicioSesion.aspx/btnIngresar_Click',
                  data: '{correo:' + num + '}',
                  contentType: "application/json; charset=utf-8",
                  dataType: "json",
                  async: true,
                  success: function () {
-                    location.href = "Administrador.aspx";
+                     alert("funciono");
+                    location.href = "Carrito.aspx";
                  },
                  error: function () {
                     alert("No funciona");
