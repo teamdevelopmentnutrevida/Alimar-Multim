@@ -107,7 +107,7 @@
 		
             <nav class="menu_nav">
                 <ul class="menu_mm">
-                    <li class="menu_mm"><a href="#">Home</a></li>
+                    <li class="menu_mm"><a href="PaginaInicio.aspx">Home</a></li>
                     <li class="menu_mm"><a href="#">Nuevos Productos</a></li>
                     <li class="menu_mm"><a href="Carrito.aspx">Ver mi carrito</a></li>
                     <li class="menu_mm"><a href="SobreNosotros.aspx">Acerca de nosotros</a></li>
