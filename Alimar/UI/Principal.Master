@@ -21,6 +21,9 @@
     <link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css" />
     <link rel="stylesheet" type="text/css" href="styles/responsive.css" />
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
 </head>
 <body>
     <div class="super_container">

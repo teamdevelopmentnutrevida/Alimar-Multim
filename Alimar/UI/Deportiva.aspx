@@ -22,7 +22,7 @@
 				<div class="col-lg-4 promo_col">
 					<div class="promo_item">
 						<div class="promo_image">
-							<img src="RopaAlimar/deportiva1.jpg" alt="">
+							<img src="RopaAlimar/deportiva 1.jpg" alt="">
 						</div>
 						<div class="promo_link"><a href="#">Comprar ahora</a></div>
 					</div>
@@ -32,7 +32,7 @@
 				<div class="col-lg-4 promo_col">
 					<div class="promo_item">
 						<div class="promo_image">
-							<img src="RopaAlimar/deportiva2.jpg" alt="">
+							<img src="RopaAlimar/deportiva 2.jpg" alt="">
 						</div>
 						<div class="promo_link"><a href="#">Comprar ahora</a></div>
 					</div>

@@ -60,7 +60,7 @@
 				<div class="col-lg-4 promo_col">
 					<div class="promo_item">
 						<div class="promo_image">
-							<img src="RopaAlimar/deport.jpg" alt="">
+							<img src="RopaAlimar/deportiva 1.jpg" alt="">
 							<div class="promo_content promo_content_1">
 								<div class="promo_title">-25% desc</div>
 								<div class="promo_subtitle">Deportiva</div>

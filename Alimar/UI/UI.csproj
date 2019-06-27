@@ -73,7 +73,6 @@
     <Content Include="Carrito.aspx" />
     <Content Include="Deportiva.aspx" />
     <Content Include="Hombre.aspx" />
-    <Content Include="images\20190620_091344.jpg" />
     <Content Include="images\Alimar-1.png" />
     <Content Include="images\alimarrec.png" />
     <Content Include="images\arrow_r.png" />
@@ -91,6 +90,7 @@
     <Content Include="images\contact_info_1.png" />
     <Content Include="images\contact_info_2.png" />
     <Content Include="images\contact_info_3.png" />
+    <Content Include="images\deport.jpg" />
     <Content Include="images\down.png" />
     <Content Include="images\extra_1.jpg" />
     <Content Include="images\extra_2.jpg" />

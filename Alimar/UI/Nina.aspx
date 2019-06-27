@@ -21,7 +21,7 @@
 				<div class="col-lg-4 promo_col">
 					<div class="promo_item">
 						<div class="promo_image">
-							<img src="RopaAlimar/BlusaNiña.jpeg" alt="">
+                            <a href="Producto.aspx?Valor=RopaAlimar/BlusaNiña.jpeg"><img src="RopaAlimar/BlusaNiña.jpeg" alt=""></a>
 						</div>
 						<div class="promo_link"><a href="#">Comprar ahora</a></div>
 					</div>
@@ -31,7 +31,7 @@
 				<div class="col-lg-4 promo_col">
 					<div class="promo_item">
 						<div class="promo_image">
-							<img src="RopaAlimar/PantalonNiña.jpg" alt="">
+                            <a href="Producto.aspx?Valor=RopaAlimar/PantalonNiña.jpg"><img src="RopaAlimar/PantalonNiña.jpg" alt=""></a>
 						</div>
 						<div class="promo_link"><a href="#">Comprar ahora</a></div>
 					</div>
@@ -41,7 +41,7 @@
 				<div class="col-lg-4 promo_col">
 					<div class="promo_item">
 						<div class="promo_image">
-							<img src="RopaAlimar/shortNiña.jpeg" alt="">
+                            <a href="Producto.aspx?Valor=RopaAlimar/shortNiña.jpeg"><img src="RopaAlimar/shortNiña.jpeg" alt=""></a>
 						</div>
 						<div class="promo_link"><a href="#">Comprar ahora</a></div>
 					</div>
