@@ -20,6 +20,9 @@
     <link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css" />
     <link rel="stylesheet" type="text/css" href="styles/responsive.css" />
+
+    <link rel="shortcut icon" href="images/favicon.ico" />
+
 </head>
 <body>
     <div class="super_container">
@@ -38,16 +41,17 @@
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Buscadores</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="Busqueda.aspx?Valor=Mujer">Mujer</a>
-                                <a class="dropdown-item" href="Busqueda.aspx?Valor=Hombre">Hombre</a>
-                                <a class="dropdown-item" href="Busqueda.aspx?Valor=Niño">Niño</a>
-                                <a class="dropdown-item" href="Busqueda.aspx?Valor=Niña">Niña</a>
+                                <a class="dropdown-item" href="Mujer.aspx">Mujer</a>
+                                <a class="dropdown-item" href="Hombre.aspx">Hombre</a>
+                                <a class="dropdown-item" href="Nino.aspx">Niño</a>
+                                <a class="dropdown-item" href="Nina.aspx">Niña</a>
                             </div>
                         </li>
 
                         <li><a>Buscar</a></li>
                         <li>
-                            <input style="width: 300px" class="form-control" id="myInput" type="text" placeholder="Buscando.." /></li>
+                            <form runat="server">  <asp:TextBox style="width: 300px" class="form-control" ID="TextBox1" runat="server" placeholder="Buscando.." OnTextChanged="TextBox1_TextChanged" ></asp:TextBox></form>
+                          
                     </ul>
 
                 </nav>
@@ -102,7 +106,7 @@
 		
             <nav class="menu_nav">
                 <ul class="menu_mm">
-                    <li class="menu_mm"><a href="#">Home</a></li>
+                    <li class="menu_mm"><a href="PaginaInicio.aspx">Home</a></li>
                     <li class="menu_mm"><a href="#">Nuevos Productos</a></li>
                     <li class="menu_mm"><a href="Carrito.aspx">Ver mi carrito</a></li>
                     <li class="menu_mm"><a href="SobreNosotros.aspx">Acerca de nosotros</a></li>

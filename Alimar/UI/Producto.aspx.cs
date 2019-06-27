@@ -13,12 +13,15 @@ namespace UI
         private articulo artic;
         protected void Page_Load(object sender, EventArgs e)
         {
-            artic = (articulo)Session["Articulo"];
-            lbHead.Text = artic.nombre;
-            imgProducto.ImageUrl = artic.path;
-            lbPrecio.Text = artic.path;
-            lbDescripcion.Text = artic.descipcion;
-            lbGenero.Text = artic.genero; 
+            //artic = (articulo)Session["Articulo"];
+            String Valor = Request.QueryString["Valor"];
+            //buscar por ruta en la lista
+
+            //lbHead.Text = artic.nombre;
+            //imgProducto.ImageUrl = artic.path;
+            //lbPrecio.Text = artic.precio + "";
+            //lbDescripcion.Text = artic.descipcion;
+            //lbGenero.Text = artic.genero; 
 
         }
     }
