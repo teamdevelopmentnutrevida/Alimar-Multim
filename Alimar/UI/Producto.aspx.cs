@@ -13,9 +13,7 @@ namespace UI
         private articulo artic;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //String Valor = Request.QueryString["Valor"];
-
-            String Valor = "RopaAlimar/BlusaNiña.jpeg";
+            String Valor = Request.QueryString["Valor"];
 
             ManejadorArticulo manejador = new ManejadorArticulo();
 
