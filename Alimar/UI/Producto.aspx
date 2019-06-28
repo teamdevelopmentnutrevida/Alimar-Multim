@@ -39,14 +39,6 @@
                         </div>
                     </div>
 
-                    <div class="form-group row">
-                        <asp:Label runat="server" for="Quantity" CssClass="col-sm-3 col-md-3 form-control-label">Cantidad:</asp:Label>
-                        <div class="col-sm-8 col-md-9">
-                            <asp:TextBox ID="txtCantidad" type="number" min="1" oninput="validity.valid||(value='');" max="999" value="1" CssClass="qty form-control" runat="server"></asp:TextBox>
-                            <%--<input type="number" class="qty form-control" id="input-qty" name="qty"  min="1" oninput="validity.valid||(value='');" max="999" value="1">--%>
-                        </div>
-                    </div>
-
                     <div class="form-group product-stock product-available row visible">
                         <asp:Label runat="server" class="col-sm-3 col-md-3 form-control-label"></asp:Label>
                         <div class="col-sm-8 col-sm-offset-3 col-md-9 col-md-offset-3">
