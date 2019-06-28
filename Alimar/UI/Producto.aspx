@@ -22,14 +22,14 @@
                 <!-- There's only One image -->
                 <div class="">
                     <div class="main-product-image">
-                        <asp:Image ID="imgProducto" runat="server" src="https://conacyemtoluca.files.wordpress.com/2012/05/ropa-21.jpg" alt="iMac Desktop Computer" CssClass="img-fluid" />
+                        <asp:Image ID="imgProducto" runat="server"  alt="iMac Desktop Computer" CssClass="img-fluid" />
                     </div>
                 </div>
 
             </div>
 
             <div class="col-lg-6">
-                <form runat="server" class="form-horizontal" name="buy">
+                <div runat="server" class="form-horizontal" name="buy">
 
                     <!-- Product Price  -->
                     <div class="form-group price_elem row">
@@ -43,7 +43,7 @@
                         <asp:Label runat="server" class="col-sm-3 col-md-3 form-control-label"></asp:Label>
                         <div class="col-sm-8 col-sm-offset-3 col-md-9 col-md-offset-3">
 
-                            <asp:Button ID="btnAgregar" runat="server" class="adc btn btn-primary" Text="Agregar a carrito" />
+                            <asp:Button ID="btnAgregar" runat="server" class="adc btn btn-primary" Text="Agregar a carrito" OnClick="btnAgregar_Click" />
 
                             <a href="#" class="btn btn-link btn-sm" title="Continuar comprando">&larr; Continuar comprando</a>
                         </div>
@@ -65,7 +65,7 @@
                         </div>
                     </div>
 
-                </form>
+                </div>
             </div>
         </div>
     </div>
