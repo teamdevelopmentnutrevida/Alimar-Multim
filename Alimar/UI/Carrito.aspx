@@ -2,7 +2,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-     <form runat="server">
+    <%-- <form runat="server">--%>
         <div class="list-group">
           <a href="#" class="list-group-item active">
             <h4>Lista de Compra:</h4>
@@ -27,7 +27,10 @@
                                 <tr>
                                     <td>Articulo1</td>
                                     <td><a id="prec">100</a></td>
-                                    <th><input type="number" id="b1" min="0" onclick="Sum('b1','prec','p1')" value="1"/></></th>
+                                    <th><input type="number" id="b1" min="0" onclick="Sum('b1','prec','p1')" value="1" style="width:50px;"/>
+                                        <button id="mas" onclick="Sum('b1','prec','p1')" style="width:50px">+</button>
+                                        <button id="menos" onclick="Sum('b1','prec','p1')">-</button>
+                                    </th>
                                     <th><a id="p1">100</a></th>
                                 </tr>
                                 <tr>
@@ -89,5 +92,5 @@
         </div>
 
      
- </form>   
+<%-- </form>  --%> 
 </asp:Content>

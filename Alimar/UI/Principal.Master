@@ -8,7 +8,6 @@
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
-
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="description" content="Wish shop project" />
@@ -26,10 +25,11 @@
 
 </head>
 <body>
+     <form runat="server">
     <div class="super_container">
 
         <!-- Header -->
-
+       
         <header class="header">
             <div class="header_inner d-flex flex-row align-items-center justify-content-start">
                 <a href="PaginaInicio.aspx">
@@ -51,7 +51,7 @@
 
                         <li><a>Buscar</a></li>
                         <li>
-                            <form runat="server">  <asp:TextBox style="width: 300px" class="form-control" ID="TextBox1" runat="server" placeholder="Buscando.." OnTextChanged="TextBox1_TextChanged" ></asp:TextBox></form>
+                              <asp:TextBox style="width: 300px" class="form-control" ID="TextBox1" runat="server" placeholder="Buscando.." OnTextChanged="TextBox1_TextChanged" ></asp:TextBox>
                           
                     </ul>
 
@@ -66,7 +66,7 @@
                     </div>
                     <div class="shopping">
                         <!-- Cart -->
-                        <a href="#">
+                        <a href="Carrito.aspx">
                             <div class="cart">
                                 <img src="images/shopping-bag.svg" alt="">
                                 <div class="cart_num_container">
@@ -78,7 +78,7 @@
                         </a>
 
                         <!-- Avatar -->
-                        <a href="#">
+                        <a href="Administrador.aspx">
                             <div class="avatar">
                                 <img src="images/avatar.svg" alt="">
                             </div>
@@ -103,11 +103,11 @@
                     <div></div>
                 </div>
             </div>
-         	<div class="logo menu_mm"><a href="#"><img src="images/alimarrec.png" /></a></div>
+         	<div class="logo menu_mm"><a href="PaginaInicio.aspx"><img src="images/alimarrec.png" /></a></div>
 		
             <nav class="menu_nav">
                 <ul class="menu_mm">
-                    <li class="menu_mm"><a href="#">Home</a></li>
+                    <li class="menu_mm"><a href="PaginaInicio.aspx">Home</a></li>
                     <li class="menu_mm"><a href="#">Nuevos Productos</a></li>
                     <li class="menu_mm"><a href="Carrito.aspx">Ver mi carrito</a></li>
                     <li class="menu_mm"><a href="SobreNosotros.aspx">Acerca de nosotros</a></li>
@@ -115,8 +115,6 @@
                 </ul>
             </nav>
         </div>
-
-
 
     </div>
 
@@ -143,7 +141,7 @@
         </asp:ContentPlaceHolder>
     </div>
 
-
+    </form>
     <!-- Footer -->
 
     <footer class="footer">
