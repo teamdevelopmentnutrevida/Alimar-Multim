@@ -20,7 +20,7 @@ namespace UI
 
         public void CargarTabla()
         {
-            int total = 0;
+            double total = 0;
             int cont = 1;
             if (ListaCarrito != null)
             {
@@ -40,10 +40,10 @@ namespace UI
             }
         }
 
-        private void CargarTotal(int total)
+        private void CargarTotal(double total)
         {
             SubtotalCompra.Text = total + "";
-            int imp = ((total * 13) / 100);
+            double imp = ((total * 13) / 100);
             IVA.Text = imp + "";
             Envio.Text = 3000 + "";
             totComp.Text = (total + imp + 3000) + "";
