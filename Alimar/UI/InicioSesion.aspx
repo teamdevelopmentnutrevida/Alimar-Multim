@@ -142,7 +142,7 @@ span.psw {
         <div class="col-sm-4" style="background-color:#f1f1f1">
 			<div>
   
-  <form  runat="server">
+  <%--<form  runat="server">--%>
     <div class="imgcontainer">
        <h3>Bienvenido</h3>
     </div>
@@ -165,7 +165,7 @@ span.psw {
     
       <span class="psw">Olvidó la <a href="#">contraseña?</a></span>
     </div>
-  </form>
+<%--  </form>--%>
 </div>
         </div>
         <div class="col-sm-4"></div>
