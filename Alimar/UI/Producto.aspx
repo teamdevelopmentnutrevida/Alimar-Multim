@@ -45,7 +45,7 @@
 
                             <asp:Button ID="btnAgregar" runat="server" class="adc btn btn-primary" Text="Agregar a carrito" OnClick="btnAgregar_Click" />
 
-                            <a href="#" class="btn btn-link btn-sm" title="Continuar comprando">&larr; Continuar comprando</a>
+                            <a href="PaginaInicio.aspx" class="btn btn-link btn-sm" title="Continuar comprando">&larr; Continuar comprando</a>
                         </div>
                     </div>
 
