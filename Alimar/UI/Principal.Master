@@ -25,7 +25,7 @@
 
 </head>
 <body>
-     <form runat="server">
+     <form name="myForm" runat="server">
     <div class="super_container">
 
         <!-- Header -->
@@ -51,6 +51,7 @@
 
                         <li><a>Buscar</a></li>
                         <li>
+
                               <asp:TextBox style="width: 300px" class="form-control" ID="TextBox1" runat="server" placeholder="Buscando.." OnTextChanged="TextBox1_TextChanged" ></asp:TextBox>
                           
                     </ul>
@@ -58,11 +59,11 @@
                 </nav>
                 <div class="header_content ml-auto">
                     <div class="search header_search">
-                        <form action="#">
+                        <%--<form action="#">--%>
                             <input type="search" class="search_input" required="required" />
                             <button type="submit" id="search_button" class="search_button">
                                 <img src="images/magnifying-glass.svg" alt="" /></button>
-                        </form>
+                        <%--</form>--%>
                     </div>
                     <div class="shopping">
                         <!-- Cart -->
@@ -78,7 +79,7 @@
                         </a>
 
                         <!-- Avatar -->
-                        <a href="Administrador.aspx">
+                        <a href="InicioSesion.aspx">
                             <div class="avatar">
                                 <img src="images/avatar.svg" alt="">
                             </div>
@@ -108,7 +109,6 @@
             <nav class="menu_nav">
                 <ul class="menu_mm">
                     <li class="menu_mm"><a href="PaginaInicio.aspx">Home</a></li>
-                    <li class="menu_mm"><a href="#">Nuevos Productos</a></li>
                     <li class="menu_mm"><a href="Carrito.aspx">Ver mi carrito</a></li>
                     <li class="menu_mm"><a href="SobreNosotros.aspx">Acerca de nosotros</a></li>
                     <li class="menu_mm"><a href="InicioSesion.aspx">Administración</a></li>
