@@ -155,6 +155,7 @@
     <Content Include="Nina.aspx" />
     <Content Include="Nino.aspx" />
     <Content Include="PaginaInicio.aspx" />
+    <Content Include="Pago.aspx" />
     <Content Include="Pantalon.aspx" />
     <Content Include="Pijama.aspx" />
     <Content Include="plugins\colorbox\colorbox.css" />
@@ -303,6 +304,13 @@
     </Compile>
     <Compile Include="PaginaInicio.aspx.designer.cs">
       <DependentUpon>PaginaInicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Pago.aspx.cs">
+      <DependentUpon>Pago.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Pago.aspx.designer.cs">
+      <DependentUpon>Pago.aspx</DependentUpon>
     </Compile>
     <Compile Include="Pantalon.aspx.cs">
       <DependentUpon>Pantalon.aspx</DependentUpon>
