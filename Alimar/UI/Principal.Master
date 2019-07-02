@@ -4,7 +4,7 @@
 
 <html>
 <head runat="server">
-    <title>Bienvenidos</title>
+    <title>Alimar</title>
     <asp:ContentPlaceHolder ID="head" runat="server">
     </asp:ContentPlaceHolder>
 
@@ -134,7 +134,10 @@
     <br />
     <br />
     <div>
+
+        
         <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+
         </asp:ContentPlaceHolder>
     </div>
 
