@@ -4,13 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace BL
+namespace TO
 {
-    public class articulo
+    public class TOArticulo
     {
+
         //permite crear un objeto de articulo
 
-        public articulo(string tipo, string path, string genero, double edad, string descipcion, double precio, string nombre)
+        public TOArticulo(string tipo, string path, string genero, double edad, string descipcion, double precio, string nombre)
         {
             this.tipo = tipo;
             this.path = path;
@@ -30,7 +31,7 @@ namespace BL
         public double precio { set; get; }
         public string nombre { set; get; }
 
-        public articulo()
+        public TOArticulo()
         {
         }
 

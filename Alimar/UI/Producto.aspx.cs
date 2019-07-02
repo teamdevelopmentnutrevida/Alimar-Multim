@@ -13,15 +13,25 @@ namespace UI
         private articulo artic;
         protected void Page_Load(object sender, EventArgs e)
         {
-            //artic = (articulo)Session["Articulo"];
             String Valor = Request.QueryString["Valor"];
-            //buscar por ruta en la lista
 
-            //lbHead.Text = artic.nombre;
-            //imgProducto.ImageUrl = artic.path;
-            //lbPrecio.Text = artic.precio + "";
-            //lbDescripcion.Text = artic.descipcion;
-            //lbGenero.Text = artic.genero; 
+            ManejadorArticulo manejador = new ManejadorArticulo();
+
+            articulo artic = manejador.recuperarArticulo(Valor);
+
+            lbHead.Text = artic.nombre;
+            imgProducto.ImageUrl = artic.path;
+            lbPrecio.Text = artic.precio + "";
+            lbDescripcion.Text = artic.descipcion;
+            lbGenero.Text = artic.genero;
+
+        }
+
+        protected void btnAgregar_Click(object sender, EventArgs e)
+        {
+            ManejadorCarrito carrito = new ManejadorCarrito();
+
+            carrito.AgregarArticulo(artic);
 
         }
     }
