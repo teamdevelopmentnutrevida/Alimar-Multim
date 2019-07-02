@@ -10,7 +10,8 @@ namespace UI
 {
     public partial class Administrador : System.Web.UI.Page
     {
-        public static ManejadorCarrito m = new ManejadorCarrito();
+        List<articulo> list = new List<articulo>();
+        public static ManejadorArticulo m = new ManejadorArticulo();
         protected void Page_Load(object sender, EventArgs e)
         {
             CargarLista();
@@ -18,12 +19,32 @@ namespace UI
         }
         private void CargarLista()
         {
-            m.AgregarArticulo(new articulo("tipo1","path1", "genero1", 12, "descipcion", 55, "nombre"));
+            int cont = 1;
+            list = m.traerLista();
+            foreach(articulo a in list)
+            {
+                litTabla.Text += "<tr><td>"+a.nombre+"</td>"+
+                "<td><asp:Button runat=\"server\" ID=\"Modif"+cont+"\" OnClick=\"Modif_Click\" CommandArgument=\"Modif"+cont+"\" Text=\"Modificar\"></asp:Button></td>"+
+               "<td><asp:Button runat =\"server\" ID=\"Elim"+cont+"\" CommandArgument=\"Elim"+cont+ "\" OnClick=\"Elim_Click\" Text = \"Eliminar\"></asp:Button></td></tr>";
+                cont += 1;
+            }
         }
 
         protected void btn_Click(object sender, EventArgs e)
         {
             Response.Redirect("Carrito.aspx");
+        }
+
+        protected void Modif_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        protected void Elim_Click(object sender, EventArgs e)
+        {
+            Button txt = (Button)sender;
+            string id = txt.ID;
+            
         }
     }
 }

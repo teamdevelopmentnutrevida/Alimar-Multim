@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using DAO;
+using TO;
 
 namespace BL
 {
@@ -68,6 +70,17 @@ namespace BL
             lista.Add(pijama2);
 
             return lista;
+        }
+
+        public articulo recuperarArticulo(String path) {
+
+            DAOArticulo dao = new DAOArticulo();
+
+            TOArticulo to = dao.recuperarArticulo(path);
+
+            articulo art = new articulo(to.tipo,to.path,to.genero,to.edad,to.descipcion,to.precio,to.nombre);
+
+            return art;
         }
     }
 }

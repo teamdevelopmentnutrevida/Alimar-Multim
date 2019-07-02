@@ -22,14 +22,14 @@
                 <!-- There's only One image -->
                 <div class="">
                     <div class="main-product-image">
-                        <asp:Image ID="imgProducto" runat="server" src="https://conacyemtoluca.files.wordpress.com/2012/05/ropa-21.jpg" alt="iMac Desktop Computer" CssClass="img-fluid" />
+                        <asp:Image ID="imgProducto" runat="server"  alt="iMac Desktop Computer" CssClass="img-fluid" />
                     </div>
                 </div>
 
             </div>
 
             <div class="col-lg-6">
-                <form runat="server" class="form-horizontal" name="buy">
+                <div runat="server" class="form-horizontal" name="buy">
 
                     <!-- Product Price  -->
                     <div class="form-group price_elem row">
@@ -39,19 +39,11 @@
                         </div>
                     </div>
 
-                    <div class="form-group row">
-                        <asp:Label runat="server" for="Quantity" CssClass="col-sm-3 col-md-3 form-control-label">Cantidad:</asp:Label>
-                        <div class="col-sm-8 col-md-9">
-                            <asp:TextBox ID="txtCantidad" type="number" min="1" oninput="validity.valid||(value='');" max="999" value="1" CssClass="qty form-control" runat="server"></asp:TextBox>
-                            <%--<input type="number" class="qty form-control" id="input-qty" name="qty"  min="1" oninput="validity.valid||(value='');" max="999" value="1">--%>
-                        </div>
-                    </div>
-
                     <div class="form-group product-stock product-available row visible">
                         <asp:Label runat="server" class="col-sm-3 col-md-3 form-control-label"></asp:Label>
                         <div class="col-sm-8 col-sm-offset-3 col-md-9 col-md-offset-3">
 
-                            <asp:Button ID="btnAgregar" runat="server" class="adc btn btn-primary" Text="Agregar a carrito" />
+                            <asp:Button ID="btnAgregar" runat="server" class="adc btn btn-primary" Text="Agregar a carrito" OnClick="btnAgregar_Click" />
 
                             <a href="#" class="btn btn-link btn-sm" title="Continuar comprando">&larr; Continuar comprando</a>
                         </div>
@@ -73,7 +65,7 @@
                         </div>
                     </div>
 
-                </form>
+                </div>
             </div>
         </div>
     </div>
