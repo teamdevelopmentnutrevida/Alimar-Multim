@@ -17,7 +17,17 @@ namespace UI
 
             ManejadorArticulo manejador = new ManejadorArticulo();
 
-            articulo artic = manejador.recuperarArticulo(Valor);
+
+            if (IsPostBack)
+            {
+                artic = (articulo)Session["articulo"];
+            }
+            else {
+                artic = manejador.recuperarArticulo(Valor);
+                Session["articulo"] = artic;
+            }
+
+            
 
             lbHead.Text = artic.nombre;
             imgProducto.ImageUrl = artic.path;
@@ -29,6 +39,8 @@ namespace UI
 
         protected void btnAgregar_Click(object sender, EventArgs e)
         {
+
+
             ManejadorCarrito carrito = new ManejadorCarrito();
 
             carrito.AgregarArticulo(artic);
