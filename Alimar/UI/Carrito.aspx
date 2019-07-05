@@ -31,7 +31,7 @@
      <div class="container">
            <div class="row">
                    <div class="col-lg">
-                        <table class="table table-striped" id="tblList">
+                        <table class="table table-striped" id="tblList" style="overflow-y:scroll">
                             <thead>
                                 <tr>
                                     <th>Articulo</th>

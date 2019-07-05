@@ -10,14 +10,16 @@ namespace UI
 {
     public partial class Producto : System.Web.UI.Page
     {
-        private articulo artic;
+       public articulo artic = new articulo();
+       public static ManejadorCarrito carrito = new ManejadorCarrito();
+
         protected void Page_Load(object sender, EventArgs e)
         {
-            String Valor = Request.QueryString["Valor"];
+            string Valor = Request.QueryString["Valor"];
 
             ManejadorArticulo manejador = new ManejadorArticulo();
 
-            articulo artic = manejador.recuperarArticulo(Valor);
+             artic = manejador.recuperarArticulo(Valor);
 
             lbHead.Text = artic.nombre;
             imgProducto.ImageUrl = artic.path;
@@ -28,11 +30,10 @@ namespace UI
         }
 
         protected void btnAgregar_Click(object sender, EventArgs e)
-        {
-            ManejadorCarrito carrito = new ManejadorCarrito();
-
+        { 
             carrito.AgregarArticulo(artic);
-
+            btnAgregar.Enabled = false;
+            btnAgregar.CssClass = "adc btn btn-primary";
         }
     }
 }

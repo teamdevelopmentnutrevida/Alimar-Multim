@@ -14,8 +14,11 @@ namespace UI
         public static ManejadorCarrito m = new ManejadorCarrito();
         protected void Page_Load(object sender, EventArgs e)
         {
-            ListaCarrito = m.getLista();
-            CargarTabla();
+            if (!IsPostBack)
+            {
+                ListaCarrito = m.getLista();
+                CargarTabla();
+            }
         }
 
         public void CargarTabla()
