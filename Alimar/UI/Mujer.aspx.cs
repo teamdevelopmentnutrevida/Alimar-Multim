@@ -18,5 +18,11 @@ namespace UI
         public static void EnviarObjeto(string path) {
             HttpContext.Current.Session["Articulo"] = path;
         }
+
+
+
+        public string datosEncontrados() {
+            return "11";
+        }
     }
 }

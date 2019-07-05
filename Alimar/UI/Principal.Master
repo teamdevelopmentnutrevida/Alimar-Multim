@@ -40,12 +40,12 @@
                         <li><a href="PaginaInicio.aspx">Home</a></li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Buscadores</a>
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Categorías</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="Mujer.aspx">Mujer</a>
-                                <a class="dropdown-item" href="Hombre.aspx">Hombre</a>
-                                <a class="dropdown-item" href="Nino.aspx">Niño</a>
-                                <a class="dropdown-item" href="Nina.aspx">Niña</a>
+                                <a class="dropdown-item" href="Mujer.aspx?Valor=mujer">Mujer</a>
+                                <a class="dropdown-item" href="Hombre.aspx?Valor=hombre">Hombre</a>
+                                <a class="dropdown-item" href="Nino.aspx?Valor=nino">Niño</a>
+                                <a class="dropdown-item" href="Nina.aspx?Valor=nina">Niña</a>
                             </div>
                         </li>
 
@@ -58,13 +58,7 @@
 
                 </nav>
                 <div class="header_content ml-auto">
-                    <div class="search header_search">
-                        <%--<form action="#">--%>
-                            <input type="search" class="search_input" required="required" />
-                            <button type="submit" id="search_button" class="search_button">
-                                <img src="images/magnifying-glass.svg" alt="" /></button>
-                        <%--</form>--%>
-                    </div>
+                    
                     <div class="shopping">
                         <!-- Cart -->
                         <a href="Carrito.aspx">

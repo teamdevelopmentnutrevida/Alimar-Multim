@@ -10,7 +10,7 @@
 			<div class="row">
 				<div class="col">
 					<div class="section_title_container text-center">
-						<div class="section_title">Productos encontrados:  11   </div>
+						<div class="section_title">Productos encontrados: <%datosEncontrados();%>   </div>
 					</div>
 				</div>
 			</div>
