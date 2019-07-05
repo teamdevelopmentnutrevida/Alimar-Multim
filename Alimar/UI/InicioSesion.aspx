@@ -14,8 +14,6 @@ input[type=text], input[type=password] {
   display: inline-block;
   border: 1px solid #ccc;
   box-sizing: border-box;  
-
-
 }
 
 /* Set a style for all buttons */

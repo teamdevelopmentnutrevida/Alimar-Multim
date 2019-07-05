@@ -41,8 +41,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="articulo.cs" />
+    <Compile Include="Ingreso.cs" />
     <Compile Include="ManejadorArticulo.cs" />
     <Compile Include="ManejadorCarrito.cs" />
+    <Compile Include="ManejadorLogin.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

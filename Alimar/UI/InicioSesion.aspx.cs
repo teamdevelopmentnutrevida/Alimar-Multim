@@ -4,30 +4,38 @@ using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
+using BL;
 
 namespace UI
 {
     public partial class InicioSesion : System.Web.UI.Page
     {
-
-        public static string correoAdmin = "admin@gmail.com";
-        public static string contrAdmin = "Admin123";
-
+        public ManejadorLogin ingreso = new ManejadorLogin();
+        Ingreso admin;
         protected void Page_Load(object sender, EventArgs e)
         {
             Page.ClientScript.RegisterStartupScript(Page.GetType(), "", "cargar()", true);
+            admin = ingreso.TraerDatos();
+            
         }
 
 		protected void btnIngresar_Click(object sender, EventArgs e)
 		{
-			if (txtCorr.Text.Equals(correoAdmin) && txtContras.Text.Equals(contrAdmin))
-			{
-				Response.Redirect("Administrador.aspx");
-			} else
-			{
-				Response.Redirect("PaginaInicio.aspx");
-			}
-			
+            if (admin != null)
+            {
+                if (txtCorr.Text.Equals(admin.Correo) && txtContras.Text.Equals(admin.Contrasenna))
+                {
+                    Response.Redirect("Administrador.aspx");
+                }
+                else
+                {
+                    Response.Redirect("PaginaInicio.aspx");
+                }
+            }
+            else
+            {
+                Response.Redirect("PaginaInicio.aspx");
+            }
 		}
 
 		protected void btnCancel_Click(object sender, EventArgs e)

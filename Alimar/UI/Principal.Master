@@ -37,19 +37,19 @@
                 </a>
                 <nav class="main_nav">
                     <ul>
-                        <li><a href="PaginaInicio.aspx">Home</a></li>
+                        <li><a href="PaginaInicio.aspx" style="font-size:1.5rem">Inicio</a></li>
 
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#">Buscadores</a>
+                            <a class="nav-link dropdown-toggle" style="font-size:1.5rem" data-toggle="dropdown" href="#">Categorías</a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="Mujer.aspx">Mujer</a>
-                                <a class="dropdown-item" href="Hombre.aspx">Hombre</a>
-                                <a class="dropdown-item" href="Nino.aspx">Niño</a>
-                                <a class="dropdown-item" href="Nina.aspx">Niña</a>
+                                <a class="dropdown-item" style="font-size:1rem"href="Mujer.aspx?Valor=mujer">Mujer</a>
+                                <a class="dropdown-item"style="font-size:1rem" href="Hombre.aspx?Valor=hombre">Hombre</a>
+                                <a class="dropdown-item"style="font-size:1rem" href="Nino.aspx?Valor=nino">Niño</a>
+                                <a class="dropdown-item"style="font-size:1rem" href="Nina.aspx?Valor=nina">Niña</a>
                             </div>
                         </li>
 
-                        <li><a>Buscar</a></li>
+                        <li><a style="font-size:1.5rem" >Buscar</a></li>
                         <li>
 
                               <asp:TextBox style="width: 300px" class="form-control" ID="TextBox1" runat="server" placeholder="Buscando.." OnTextChanged="TextBox1_TextChanged" ></asp:TextBox>

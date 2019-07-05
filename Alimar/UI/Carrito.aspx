@@ -31,7 +31,7 @@
      <div class="container">
            <div class="row">
                    <div class="col-lg">
-                        <table class="table table-striped" id="tblList">
+                        <table class="table table-striped" id="tblList" style="overflow-y:scroll">
                             <thead>
                                 <tr>
                                     <th>Articulo</th>
@@ -141,23 +141,14 @@
                     <hr />
                   <asp:Button runat="server" ID="btnAP" OnClick="btnAP_Click" CssClass="btn" Text="Comprar" />
                   <asp:Button runat="server" ID="btnCanc"  OnClick="btnCanc_Click" CssClass="btn" Text="Cancelar" />
-                        
-                
-                  
-
                 </div>
               </div>
             </div>
-               <%--</div>   --%>  
-
-                
+               <%--</div>   --%>                  
             </div>
-         
          <div>
              <asp:Literal runat="server" ID="pagoliteral"></asp:Literal>
          </div>
-         
-         
         </div>
          
      <script>
