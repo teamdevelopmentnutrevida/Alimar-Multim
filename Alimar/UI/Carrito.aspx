@@ -57,67 +57,7 @@
                         </table>
                    </div>
 
-                <script>
-                    function Sum(cant, precio, subtotal) {
-                        var cantid = document.getElementById("" + cant + "").value;
-                        var prec = document.getElementById("" + precio + "").innerHTML;
-                        var su = parseInt(cantid)+ parseInt(1);
-                        var t = parseInt(su) * parseInt(prec);
-                        document.getElementById("" + cant + "").value = su;
-                        document.getElementById("" + subtotal + "").innerHTML = t;
-                        SumTotal(prec);
-                    }
-                </script>
-                <script>
-                    function Rest(cant, precio, subtotal) {
-                        var cantid = document.getElementById("" + cant + "").value;
-                        var prec = document.getElementById("" + precio + "").innerHTML;
-                        
-                        if (cantid === "0") {
-                            var su = "0";
-                            var t = "0";
-                            ResTotal(su);
-                        } else {
-                            var su = parseInt(cantid) - parseInt(1);
-                            var t = parseInt(su) * parseInt(prec);
-                             ResTotal(prec);
-                        }
-                        
-                        document.getElementById("" + cant + "").value = su;
-                        document.getElementById("" + subtotal + "").innerHTML  = t;
-                        
-                    }
-                </script>
-               <script>
-                   function SumTotal(precio) {
-                       var subtotal = document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML;
-                       var nuevoSub = parseInt(subtotal) + parseInt(precio);
-                       document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML = nuevoSub;
-                       var impIVA = (parseInt(nuevoSub) * parseInt(13))/ parseInt(100);
-                       document.getElementById('<%=IVA.ClientID%>').innerHTML = impIVA;
-                       var env = document.getElementById('<%=Envio.ClientID%>').innerHTML;
-                       var tot = parseInt(nuevoSub) + parseInt(impIVA) + parseInt(env);
-                       document.getElementById('<%=totComp.ClientID%>').innerHTML = tot;
-                    }
-                </script>
-                <script>
-                    function ResTotal(precio) {
-                        if (precio !== "0") {
-                            var subtotal = document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML;
-                            var nuevoSub = parseInt(subtotal) - parseInt(precio);
-                            document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML = nuevoSub;
-                            var impIVA = (parseInt(nuevoSub) * parseInt(13)) / parseInt(100);
-                            document.getElementById('<%=IVA.ClientID%>').innerHTML = impIVA;
-                            var env = document.getElementById('<%=Envio.ClientID%>').innerHTML;
-                            var tot = parseInt(nuevoSub) + parseInt(impIVA) + parseInt(env);
-                            document.getElementById('<%=totComp.ClientID%>').innerHTML = tot;
-                        } else {
-                            document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML = "0";
-                            document.getElementById('<%=IVA.ClientID%>').innerHTML = "0";
-                            document.getElementById('<%=totComp.ClientID%>').innerHTML = "0";
-                        }
-                    }
-                </script>
+                
                     <div class="col-1"></div>
                     <%--<div class="col-form-label">--%>
                    
@@ -158,5 +98,72 @@
          }
 
 </script>
+    <script>
+                    function Sum(cant, precio, subtotal) {
+                        alert("Entro");
+                        var cantid = document.getElementById("" + cant + "").value;
+                        var prec = document.getElementById("" + precio + "").innerHTML;
+                        var su = parseInt(cantid)+ parseInt(1);
+                        var t = parseInt(su) * parseInt(prec);
+                        document.getElementById("" + cant + "").innerHTML = su;
+                        document.getElementById("" + subtotal + "").innerHTML = t;
+                        alert("suma + = " + prec);
+                        SumTotal(prec);
+                    }
+                </script>
+
+                <script>
+                    function Rest(cant, precio, subtotal) {
+                        var cantid = document.getElementById("" + cant + "").value;
+                        var prec = document.getElementById("" + precio + "").innerHTML;
+                        
+                        if (cantid === "0") {
+                            var su = "0";
+                            var t = "0";
+                            ResTotal(su);
+                        } else {
+                            var su = parseInt(cantid) - parseInt(1);
+                            var t = parseInt(su) * parseInt(prec);
+                             ResTotal(prec);
+                        }
+                        
+                        document.getElementById("" + cant + "").value = su;
+                        document.getElementById("" + subtotal + "").innerHTML  = t;
+                        
+                    }
+                </script>
+               <script>
+                   function SumTotal(precio) {
+                        alert("SumTotal" + precio);
+                       var subtotal = document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML;
+                       var nuevoSub = parseInt(subtotal) + parseInt(precio);
+                       document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML = nuevoSub;
+                       alert("nuevo sub "+nuevoSub);
+                       var impIVA = (parseInt(nuevoSub) * parseInt(13))/ parseInt(100);
+                       document.getElementById('<%=IVA.ClientID%>').innerHTML = impIVA;
+                       var env = document.getElementById('<%=Envio.ClientID%>').innerHTML;
+                       var tot = parseInt(nuevoSub) + parseInt(impIVA) + parseInt(env);
+                       document.getElementById('<%=totComp.ClientID%>').innerHTML = tot;
+                    }
+                </script>
+
+                <script>
+                    function ResTotal(precio) {
+                        if (precio !== "0") {
+                            var subtotal = document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML;
+                            var nuevoSub = parseInt(subtotal) - parseInt(precio);
+                            document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML = nuevoSub;
+                            var impIVA = (parseInt(nuevoSub) * parseInt(13)) / parseInt(100);
+                            document.getElementById('<%=IVA.ClientID%>').innerHTML = impIVA;
+                            var env = document.getElementById('<%=Envio.ClientID%>').innerHTML;
+                            var tot = parseInt(nuevoSub) + parseInt(impIVA) + parseInt(env);
+                            document.getElementById('<%=totComp.ClientID%>').innerHTML = tot;
+                        } else {
+                            document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML = "0";
+                            document.getElementById('<%=IVA.ClientID%>').innerHTML = "0";
+                            document.getElementById('<%=totComp.ClientID%>').innerHTML = "0";
+                        }
+                    }
+                </script>
 <%-- </form>  --%> 
 </asp:Content>

@@ -23,9 +23,10 @@ namespace UI
             list = m.traerLista();
             foreach(articulo a in list)
             {
-                litTabla.Text += "<tr><td>"+a.nombre+"</td>"+
-                "<td><asp:Button runat=\"server\" ID=\"Modif"+cont+"\" OnClick=\"Modif_Click\" CommandArgument=\"Modif"+cont+"\" Text=\"Modificar\"></asp:Button></td>"+
-               "<td><asp:Button runat =\"server\" ID=\"Elim"+cont+"\" CommandArgument=\"Elim"+cont+ "\" OnClick=\"Elim_Click\" Text = \"Eliminar\"></asp:Button></td></tr>";
+                litTabla.Text += "<tr>" +
+                "<td>"+ a.nombre+"</td>"+
+                "<td><button id=\"Modif"+cont+"\" onclick=\"Modificar(Modif"+cont+ ")\" class=\"btn\"><i class=\"fa fa-pencil-square-o\" aria-hidden=\"true\"></i></button></td>" +
+                "<td><button id=\"Elim"+cont+ "\"  onclick=\"Eliminar(Elim"+cont+")\" class=\"btn\"><i class=\"fa fa-trash\"></i></button></td></tr>";
                 cont += 1;
             }
         }
