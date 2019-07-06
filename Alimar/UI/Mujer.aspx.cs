@@ -10,9 +10,10 @@ namespace UI
 {
     public partial class Mujer : System.Web.UI.Page
     {
+        public string datos;
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            datos = datosEncontrados();
         }
         [System.Web.Services.WebMethod(EnableSession = true)]
         public static void EnviarObjeto(string path) {

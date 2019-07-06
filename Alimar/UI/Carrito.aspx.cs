@@ -20,9 +20,9 @@ namespace UI
             }
             else
             {
-                ListaCarrito = m.getLista();
-                CargarTabla();
-            }
+            ListaCarrito = m.getLista();
+            CargarTabla();
+        }
         }
 
         public void CargarTabla()
