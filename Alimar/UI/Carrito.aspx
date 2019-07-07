@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="Carrito.aspx.cs" Inherits="UI.Carrito" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" MaintainScrollPositionOnPostback="true" AutoEventWireup="true" CodeBehind="Carrito.aspx.cs" Inherits="UI.Carrito" %>
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -11,11 +11,11 @@
           padding: 10px;
           text-align: center;
           text-decoration: none;
-          display: inline-block;
+          /*display: inline-block;*/
           border-radius: 8px;
           font-size: 16px;
           margin: 2px 1px;
-          cursor: pointer;
+          /*cursor: pointer;*/
     }
   
     </style>
@@ -31,6 +31,7 @@
      <div class="container">
            <div class="row">
                    <div class="col-lg">
+                      
                         <table class="table table-striped" id="tblList" style="overflow-y:scroll">
                             <thead>
                                 <tr>
@@ -39,19 +40,6 @@
                                 </tr>
                             </thead>
                             <tbody style="width:auto">
-                                <%--<tr>
-                                    <td><h6><strong>Articulo1</strong></h6>
-                                        <asp:Image ID="imgProducto" runat="server" src="https://conacyemtoluca.files.wordpress.com/2012/05/ropa-21.jpg" alt="iMac Desktop Computer" CssClass="img-fluid" style="width:125px;height:100px;"/>
-                                    </td>
-                                    <td><strong>Precio:  ₡ </strong><a id="prec"> 100 </a><br />
-                                        <strong>Cantidad: </strong><input type="number" id="b1" min="0" onclick="Sum('b1','prec','p1')" value="1" style="width:50px;"/>
-                                        <button id="mas" onclick="Sum('b1','prec','p1')" style="width:30px">+</button>
-                                        <button id="menos" onclick="Rest('b1','prec','p1')" style="width:30px">-</button>
-                                    <br />
-                                        <br />
-                                    <strong>Subtotal: </strong><a id="p1">100</a></td>
-                                </tr>--%>
-                                
                                  <asp:Literal runat="server" ID="litTabla"></asp:Literal>
                             </tbody>
                         </table>
@@ -61,7 +49,17 @@
                     <div class="col-1"></div>
                     <%--<div class="col-form-label">--%>
                    
-
+<%--<script>
+    function CargarTotal(sub) {
+        document.getElementById('SubtotalCompra').innerHTML = sub;
+        var imp = (parseInt(sub) * parseInt(13)) / parseInt(100);
+        document.getElementById('IVA').innerHTML = imp;
+        document.getElementById('Envio').innerHTML = "3000";
+        var tot = parseInt(sub) + parseInt(imp) + parseInt("3000");
+        document.getElementById('totComp').innerHTML = tot;
+        return false;
+    }
+</script>--%>
                <div class="col-xl-4 col-lg-5">
               <div class="card shadow mb-4">
                 <!-- Card Header - Dropdown -->
@@ -69,8 +67,8 @@
                   <h6 class="m-0 font-weight-bold text-primary">Total de la Compra</h6>
                 </div>
                 <!-- Card Body -->
-
-                <div class="card-body">
+                 
+               <div class="card-body">
                   <div class="chart-pie pt-4">
                     <strong>Subtotal: ₡ </strong><asp:Label runat="server" ID="SubtotalCompra" Text="0"></asp:Label><br>
                     <strong>IVA 13%: ₡ </strong><asp:Label runat="server" ID="IVA" Text="0"></asp:Label><br>
@@ -81,74 +79,77 @@
                     <hr />
                   <asp:Button runat="server" ID="btnAP" OnClick="btnAP_Click" CssClass="btn" Text="Comprar" />
                   <asp:Button runat="server" ID="btnCanc"  OnClick="btnCanc_Click" CssClass="btn" Text="Cancelar" />
-                </div>
+                   </div>
               </div>
             </div>
                <%--</div>   --%>                  
             </div>
+       
          <div>
              <asp:Literal runat="server" ID="pagoliteral"></asp:Literal>
          </div>
-        </div>
-         
+        </div> 
      <script>
          function Pago() {
-             alert("Pago Exitoso! Gracias por su compra");
-             Location.href("PaginaInicio.aspx");
+            alert("Pago realizado. Gracias por su compra.");
+            location.href = "PaginaInicio.aspx";
          }
 
 </script>
     <script>
-                    function Sum(cant, precio, subtotal) {
-                        alert("Entro");
-                        var cantid = document.getElementById("" + cant + "").value;
-                        var prec = document.getElementById("" + precio + "").innerHTML;
-                        var su = parseInt(cantid)+ parseInt(1);
-                        var t = parseInt(su) * parseInt(prec);
-                        document.getElementById("" + cant + "").innerHTML = su;
-                        document.getElementById("" + subtotal + "").innerHTML = t;
-                        alert("suma + = " + prec);
-                        SumTotal(prec);
-                    }
-                </script>
+         function Cancel() {
+             alert("Gracias por visitarnos");
+             location.href = "PaginaInicio.aspx";
+         }
 
-                <script>
-                    function Rest(cant, precio, subtotal) {
-                        var cantid = document.getElementById("" + cant + "").value;
-                        var prec = document.getElementById("" + precio + "").innerHTML;
-                        
-                        if (cantid === "0") {
-                            var su = "0";
-                            var t = "0";
-                            ResTotal(su);
-                        } else {
-                            var su = parseInt(cantid) - parseInt(1);
-                            var t = parseInt(su) * parseInt(prec);
-                             ResTotal(prec);
-                        }
-                        
-                        document.getElementById("" + cant + "").value = su;
-                        document.getElementById("" + subtotal + "").innerHTML  = t;
-                        
-                    }
-                </script>
-               <script>
-                   function SumTotal(precio) {
-                        alert("SumTotal" + precio);
-                       var subtotal = document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML;
-                       var nuevoSub = parseInt(subtotal) + parseInt(precio);
-                       document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML = nuevoSub;
-                       alert("nuevo sub "+nuevoSub);
-                       var impIVA = (parseInt(nuevoSub) * parseInt(13))/ parseInt(100);
-                       document.getElementById('<%=IVA.ClientID%>').innerHTML = impIVA;
-                       var env = document.getElementById('<%=Envio.ClientID%>').innerHTML;
-                       var tot = parseInt(nuevoSub) + parseInt(impIVA) + parseInt(env);
-                       document.getElementById('<%=totComp.ClientID%>').innerHTML = tot;
-                    }
-                </script>
-
-                <script>
-                    function ResTotal(precio) {
+</script>
+    <script>
+        function Sum(cant, precio, subtotal) {
+            alert("Solo suma");
+            var cantid = document.getElementById("" + cant + "").value;
+            var prec = document.getElementById("" + precio + "").innerHTML;
+            var su = parseInt(cantid)+ parseInt(1);
+            var t = parseInt(su) * parseInt(prec);
+            document.getElementById("" + cant + "").value = su;
+            document.getElementById("" + subtotal + "").innerHTML = t;
+            SumTotal(prec);
+        }
+      
+    </script>
+    <script>
+        function SumTotal(precio) {
+            alert("Sumtotal");
+            var subtotal = document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML;
+            var nuevoSub = parseInt(subtotal) + parseInt(precio);
+            document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML = nuevoSub;
+            var impIVA = (parseInt(nuevoSub) * parseInt(13)) / parseInt(100);
+            document.getElementById('<%=IVA.ClientID%>').innerHTML = impIVA;
+            var env = document.getElementById('<%=Envio.ClientID%>').innerHTML;
+            var tot = parseInt(nuevoSub) + parseInt(impIVA) + parseInt(env);
+            document.getElementById('<%=totComp.ClientID%>').innerHTML = tot;
+        }
+        
+    </script>
+    <script>
+        function Rest(cant, precio, subtotal) {
+            alert("Solo resta");
+            var cantid = document.getElementById("" + cant + "").value;
+            var prec = document.getElementById("" + precio + "").innerHTML;
+            if (cantid === "0") {
+                var su = "0";
+                var t = "0";
+                ResTotal(su);
+            } else {
+                var su = parseInt(cantid) - parseInt(1);
+                var t = parseInt(su) * parseInt(prec);
+                ResTotal(prec);
+            }
+            document.getElementById("" + cant + "").value = su;
+            document.getElementById("" + subtotal + "").innerHTML = t;
+        }
+    </script>
+    <script>
+        function ResTotal(precio) {
                         if (precio !== "0") {
                             var subtotal = document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML;
                             var nuevoSub = parseInt(subtotal) - parseInt(precio);
@@ -163,7 +164,6 @@
                             document.getElementById('<%=IVA.ClientID%>').innerHTML = "0";
                             document.getElementById('<%=totComp.ClientID%>').innerHTML = "0";
                         }
-                    }
-                </script>
-<%-- </form>  --%> 
+        }
+    </script>
 </asp:Content>
