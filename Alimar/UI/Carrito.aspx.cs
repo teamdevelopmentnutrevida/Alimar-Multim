@@ -22,9 +22,9 @@ namespace UI
             else { 
                 ListaCarrito = m.getLista();
                 CargarTabla();
-                //Page.ClientScript.RegisterStartupScript(Page.GetType(), "", "CargarTotal("+total+")", true);
             }
         }
+
 
         public void CargarTabla()
         {
@@ -63,10 +63,10 @@ namespace UI
         protected void btnCanc_Click(object sender, EventArgs e)
         {
             m.IniciarLista();
-            //SubtotalCompra.Text = "0";
-            //IVA.Text =  "0";
-            //Envio.Text = "0";
-            //totComp.Text = "0";
+            SubtotalCompra.Text = "0";
+            IVA.Text = "0";
+            Envio.Text = "0";
+            totComp.Text = "0";
             litTabla.Text = "";
             Response.Redirect("PaginaInicio.aspx");
         }
@@ -105,8 +105,8 @@ namespace UI
                  "<input  class=\"form-control\" id =\"tel\" style=\"width:50%;\"/>" +
                 "<label class=\"form-label\" for=\"tnombre\" > Correo:</label>" +
                "<input id=\"txtNombre\" class =\"form-control\" style=\"width:50%;\"/></div></div>" +
-            " <button id = \"Button5\" onclick =\"Pago()\" class=\"btn\" >Pagar</button>" +
-             "<button id=\"Button20\"  onclick =\"Cancel()\" class=\"btn\" >Cancelar</button>";
+            " <asp:Button ID=\"Button54\" runat=\"server\" OnClick =\"Pago()\" Class=\"btn\">Pagar</asp:Button>" +
+             "<asp:Button ID=\"Button20\" runat=\"server\" OnClick =\"Cancel()\" Class=\"btn\">Cancelar</asp:Button>";
 
         }
     }
