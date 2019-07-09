@@ -81,20 +81,26 @@
      <script type="text/javascript">
          function Pago() {
              Swal.fire({
-                  position: 'top-end',
-                  type: 'success',
-                  title: 'Pago Realizado. Gracias por su compra.',
-                  showConfirmButton: false,
-                  timer: 5500
-                })
+                 position: 'top-end',
+                 type: 'success',
+                 title: 'Pago Realizado. Gracias por su compra.',
+                 showConfirmButton: false,
+                 timer: 5500
+             });
+             alert("Pago Realizado. Gracias por su compra.");
              location.href = "PaginaInicio.aspx";
          }
 
 </script>
-    <script type="text/javascript">
-         function Cancel() {
+    <script>
+        function Cancel() {
+             Swal.fire({
+                 title: 'Gracias por visitarnos.',
+                 showConfirmButton: true,
+                 timer: 6500
+             });
              alert("Gracias por visitarnos");
-             location.href = "PaginaInicio.aspx";
+            // location.href = "PaginaInicio.aspx";
          }
 
 </script>

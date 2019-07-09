@@ -62,6 +62,7 @@ namespace UI
        
         protected void btnCanc_Click(object sender, EventArgs e)
         {
+            Page.ClientScript.RegisterStartupScript(this.GetType(), "Cancelar", "Cancel()", true);
             m.IniciarLista();
             SubtotalCompra.Text = "0";
             IVA.Text = "0";
@@ -106,7 +107,7 @@ namespace UI
                 "<label class=\"form-label\" for=\"tnombre\" > Correo:</label>" +
                "<input id=\"txtNombre\" class =\"form-control\" style=\"width:50%;\"/></div></div>" +
             " <asp:Button ID=\"Button54\" runat=\"server\" OnClick =\"Pago()\" Class=\"btn\">Pagar</asp:Button>" +
-             "<asp:Button ID=\"Button20\" runat=\"server\" OnClick =\"Cancel()\" Class=\"btn\">Cancelar</asp:Button>";
+             "<asp:Button ID=\"Button20\" runat=\"server\" OnClick =\"btnCanc_Click\" Class=\"btn\">Cancelar</asp:Button>";
 
         }
     }
