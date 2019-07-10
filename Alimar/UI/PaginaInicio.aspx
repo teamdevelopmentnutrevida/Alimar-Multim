@@ -37,7 +37,7 @@
 								<div class="promo_subtitle">Blusas</div>
 							</div>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/blusa.jpg">Comprar ahora</a></div>
 					</div>
 				</div>
 
@@ -51,7 +51,7 @@
 								<div class="promo_subtitle">Vestidos</div>
 							</div>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/vestido.jpg">Comprar ahora</a></div>
 					</div>
 				</div>
 
@@ -65,7 +65,7 @@
 								<div class="promo_subtitle">Deportiva</div>
 							</div>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/deportiva 1.jpg">Comprar ahora</a></div>
 					</div>
 				</div>
 

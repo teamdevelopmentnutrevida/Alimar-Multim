@@ -23,7 +23,7 @@
 						<div class="promo_image">
                             <a href="Producto.aspx?Valor=RopaAlimar/BlusaNiña.jpeg"><img src="RopaAlimar/BlusaNiña.jpeg" alt=""></a>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/BlusaNiña.jpeg">Comprar ahora</a></div>
 					</div>
 				</div>
 
@@ -33,7 +33,7 @@
 						<div class="promo_image">
                             <a href="Producto.aspx?Valor=RopaAlimar/PantalonNiña.jpg"><img src="RopaAlimar/PantalonNiña.jpg" alt=""></a>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/PantalonNiña.jpg">Comprar ahora</a></div>
 					</div>
 				</div>
 
@@ -43,7 +43,7 @@
 						<div class="promo_image">
                             <a href="Producto.aspx?Valor=RopaAlimar/shortNiña.jpeg"><img src="RopaAlimar/shortNiña.jpeg" alt=""></a>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/shortNiña.jpeg">Comprar ahora</a></div>
 					</div>
 				</div>
 
