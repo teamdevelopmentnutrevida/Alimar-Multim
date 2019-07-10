@@ -71,6 +71,7 @@
     <Content Include="Administrador.aspx" />
     <Content Include="Blusa.aspx" />
     <Content Include="Carrito.aspx" />
+    <Content Include="Contacto.aspx" />
     <Content Include="Deportiva.aspx" />
     <Content Include="Hombre.aspx" />
     <Content Include="images\Alimar-1.png" />
@@ -258,6 +259,13 @@
     </Compile>
     <Compile Include="Carrito.aspx.designer.cs">
       <DependentUpon>Carrito.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Contacto.aspx.cs">
+      <DependentUpon>Contacto.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Contacto.aspx.designer.cs">
+      <DependentUpon>Contacto.aspx</DependentUpon>
     </Compile>
     <Compile Include="Deportiva.aspx.cs">
       <DependentUpon>Deportiva.aspx</DependentUpon>

@@ -15,7 +15,7 @@
     <link rel="stylesheet" type="text/css" href="styles/bootstrap4/bootstrap.min.css" />
     <link href="plugins/font-awesome-4.7.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.carousel.css" />
-    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css" />
+    <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/owl.theme.default.css" />		
     <link rel="stylesheet" type="text/css" href="plugins/OwlCarousel2-2.2.1/animate.css" />
     <link href="plugins/colorbox/colorbox.css" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" type="text/css" href="styles/main_styles.css" />
@@ -30,10 +30,10 @@
 
         <!-- Header -->
        
-        <header class="header">
+        <header class="header" style="height:100px; font-size:xx-large">
             <div class="header_inner d-flex flex-row align-items-center justify-content-start">
                 <a href="PaginaInicio.aspx">
-                     <img width="70" src="images/Alimar-1.png" />
+                     <img width="90" src="images/Alimar-1.png" />
                 </a>
                 <nav class="main_nav">
                     <ul>
@@ -49,11 +49,11 @@
                             </div>
                         </li>
 
-                        <li><a style="font-size:1.5rem" >Buscar</a></li>
+                     <%--   <li><a style="font-size:1.5rem" >Buscar</a></li>--%>
                         <li>
 
-                              <asp:TextBox style="width: 300px" class="form-control" ID="TextBox1" runat="server" placeholder="Buscando.." OnTextChanged="TextBox1_TextChanged" ></asp:TextBox>
-                          
+                              <asp:TextBox style="width: 300px" class="form-control" ID="TextBox1" runat="server" placeholder="Buscar.." OnTextChanged="TextBox1_TextChanged" ></asp:TextBox>
+                          </li>
                     </ul>
 
                 </nav>
@@ -64,11 +64,7 @@
                         <a href="Carrito.aspx">
                             <div class="cart">
                                 <img src="images/shopping-bag.svg" alt="">
-                                <div class="cart_num_container">
-                                    <div class="cart_num_inner">
-                                        <div class="cart_num">1</div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </a>
 
@@ -102,10 +98,12 @@
 		
             <nav class="menu_nav">
                 <ul class="menu_mm">
-                    <li class="menu_mm"><a href="PaginaInicio.aspx">Home</a></li>
+                    <li class="menu_mm"><a href="PaginaInicio.aspx">Inicio</a></li>
                     <li class="menu_mm"><a href="Carrito.aspx">Ver mi carrito</a></li>
                     <li class="menu_mm"><a href="SobreNosotros.aspx">Acerca de nosotros</a></li>
+					<li class="menu_mm"><a href="Contacto.aspx">Contacto</a></li>
                     <li class="menu_mm"><a href="InicioSesion.aspx">Administración</a></li>
+					
                 </ul>
             </nav>
         </div>
@@ -155,7 +153,8 @@
                    <div class="footer_social">
 						<ul>
 							<li><a href="SobreNosotros.aspx">Sobre Nosotros</li>
-							<li><a>Contáctenos: +506 86760411, alimar061267@gmail.com</a></li>
+							<li><a href="Contacto.aspx">Contacto</li>
+							<li><a>Contáctenos: +(506) 86760411 <br /> email: alimar061267@gmail.com</a></li>
 						</ul>
 					</div>
 

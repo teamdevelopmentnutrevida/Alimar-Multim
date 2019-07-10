@@ -45,7 +45,9 @@
     <h3 class="sobreN" style="font-size: 20px; text-transform: uppercase; color: #2f2f2f; font-weight: 600; letter-spacing: 0.2em;" align="center">Historia</h3>
 
     <p class="sobreN" style="font-size: 12px; text-transform: uppercase; color: #2f2f2f; font-weight: 600; letter-spacing: 0.2em;" align="center">
-        Nuestra emmpresa   
+        Con más de 20 años de experiencia, la empresa Alimar nace del esfuerzo de una mujer 
+		<br />emprendedora que desde muy joven estudió diseño y confección, desde entonces ha diseñado todo tipo de prendas, 
+		<br />siempre a gusto del cliente. A partir del 2016 se crea el nombre Alimar que hoy la representa.    
         <br />
         <br/>
     </p>
