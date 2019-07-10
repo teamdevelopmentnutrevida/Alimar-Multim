@@ -55,14 +55,20 @@ namespace BL
 
         public void EliminarArtCompra(string cod)
         {
-            
-            foreach (Compra c in lisCompra)
+            if (lisCompra.Count != 0)
             {
-                string p = c.articulo.path;
-                if (p.CompareTo(cod) >= 0)
+                foreach (Compra c in lisCompra)
                 {
-                    lisCompra.Remove(c);
+                    string p = c.articulo.path;
+                    if (p.CompareTo(cod) >= 0)
+                    {
+                        lisCompra.Remove(c);
+                    }
                 }
+            }
+            else
+            {
+                lisCompra = new List<Compra>();
             }
         }
 

@@ -51,6 +51,7 @@ namespace UI
         {
             m.Sumar(pdir);
         }
+
         [System.Web.Services.WebMethod]
         public static void RestArtic(string pdir)
         {
@@ -71,7 +72,17 @@ namespace UI
             totComp.Text = (precT + imp + 3000) + "";
         }
 
-
+        protected void Pagar(object sender, EventArgs e)
+        {
+            m.restaurarLista();
+            SubtotalCompra.Text = "0";
+            IVA.Text = "0";
+            Envio.Text = "0";
+            totComp.Text = "0";
+            litTabla.Text = "";
+            Response.Write("Pago Realizado. Gracias por su compra.");
+            Response.Redirect("PaginaInicio.aspx");
+        }
        
         protected void btnCanc_Click(object sender, EventArgs e)
         {
@@ -119,7 +130,7 @@ namespace UI
                 "<label class=\"form-label\" for=\"tnombre\" > Correo:</label>" +
                "<input id=\"txtNombre\" class =\"form-control\" style=\"width:50%;\"/></div></div>" +
             "<asp:Button ID=\"Button54\" runat=\"server\" OnClick =\"Pago()\" Class=\"btn\">Pagar</asp:Button>" +
-             "<asp:Button ID=\"Button20\" runat=\"server\" OnClick =\"btnCanc_Click\" Class=\"btn\">Cancelar</asp:Button>";
+             "<asp:Button ID=\"Button20\" runat=\"server\" OnClick =\"Cancel()\" Class=\"btn\">Cancelar</asp:Button>";
         }
 
         [System.Web.Services.WebMethod]

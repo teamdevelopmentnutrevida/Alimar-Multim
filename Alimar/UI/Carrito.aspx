@@ -80,7 +80,6 @@
         </div> 
     <script type="text/javascript">
         function Elim(p) {
-            alert("Entra!");
             var param = "{'dir':' "+ p +" '}";
             $.ajax({
                 type: "POST",
