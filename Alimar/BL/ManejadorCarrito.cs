@@ -26,5 +26,17 @@ namespace BL
         {
             lista = new List<articulo>();
         }
+
+        public void ElimiArt(string path)
+        {
+            foreach (articulo a in lista)
+            {
+                if (a.path.Equals(path))
+                {
+                    lista.Remove(a);
+
+                }
+            }
+        }
     }
 }

@@ -36,12 +36,14 @@ namespace UI
                 foreach (articulo a in ListaCarrito)
                 {
                     litTabla.Text += "<tr><td><h6><strong>" + a.nombre + "</strong></h6>" +
-                    "<asp:Image ID=\"imgProd" + cont + "\" runat=\"server\" src=/" + a.path + " alt=\"iMac Desktop Computer\" CssClass = \"img-fluid\" style = \"width:125px;height:100px;\"/>" +
-                    "</td><td><strong>Precio:  </strong><a id=\"prec" + cont + "\">" + a.precio + "</a><br/>" +
+                    "<asp:Image ID=\"imgProd" + cont + "\" runat=\"server\" src= \"../" + a.path + "\" style=\"width:125px; height:100px;\"/>" +
+                    "</td><td><strong>Precio: ₡</strong><a id=\"prec" + cont + "\">" + a.precio + "</a><br/>&nbsp;" +
                    "<strong>Cantidad: </strong><input type = \"number\" id=\"num" + cont + "\" min=\"0\" value= \"1\" style=\"width:50px;\" />" +
-                   "<button id=\"mas" + cont + "\" onclick=\"Sum('num" + cont + "','prec" + cont + "','sub" + cont + "')\" style = \"width:30px\">+</button>" +
-                   "<button id=\"men" + cont + "\" onclick=\"Rest('num" + cont + "','prec" + cont + "','sub" + cont + "')\" style=\"width:30px\">-</button>" +
-                   "<br /><br /><strong>Subtotal: </strong><a id=\"sub" + cont + "\">" + a.precio + "</a></td></tr>";
+                   "<button id=\"mas" + cont + "\" onclick=\"Sum('num" + cont + "','prec" + cont + "','sub" + cont + "')\" style=\"width:30px;\">+</button>&nbsp;" +
+                   "<button id=\"men" + cont + "\" onclick=\"Rest('num" + cont + "','prec" + cont + "','sub" + cont + "')\" style=\"width:30px;\">-</button>" +
+                   " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+
+                   "<button id=\"Elim"+cont+"\" onclick=\"Elim("+a.path+ ")\" style=\"width:30px; background:red; width:30px;\"> X </button> " +
+                   "<br /><br /><strong>Subtotal: ₡</strong><a id=\"sub" + cont + "\">" + a.precio + "</a></td></tr>";
                     cont += 1;
                     total += a.precio;
                 }
@@ -109,6 +111,12 @@ namespace UI
             " <asp:Button ID=\"Button54\" runat=\"server\" OnClick =\"Pago()\" Class=\"btn\">Pagar</asp:Button>" +
              "<asp:Button ID=\"Button20\" runat=\"server\" OnClick =\"btnCanc_Click\" Class=\"btn\">Cancelar</asp:Button>";
 
+        }
+
+        [System.Web.Services.WebMethod]
+        public static void Elim_Click(string s)
+        {
+            m.ElimiArt(s);
         }
     }
     
