@@ -18,6 +18,7 @@ namespace UI
             
             if (IsPostBack)
             {
+                //Page.ClientScript.RegisterStartupScript(this.GetType(), "prueba", "CargarNumeros()", true);
             }
             else { 
                 ListaCarrito = m.getLista();
@@ -32,16 +33,17 @@ namespace UI
             int cont = 1;
             if (ListaCarrito != null)
             {
-                int fila = ListaCarrito.Count;
                 foreach (articulo a in ListaCarrito)
                 {
                     litTabla.Text += "<tr><td><h6><strong>" + a.nombre + "</strong></h6>" +
-                    "<asp:Image ID=\"imgProd" + cont + "\" runat=\"server\" src=/" + a.path + " alt=\"iMac Desktop Computer\" CssClass = \"img-fluid\" style = \"width:125px;height:100px;\"/>" +
-                    "</td><td><strong>Precio:  </strong><a id=\"prec" + cont + "\">" + a.precio + "</a><br/>" +
+                    "<asp:Image ID=\"imgProd" + cont + "\" runat=\"server\" src= \"../" + a.path + "\" style=\"width:125px; height:100px;\"/>" +
+                    "</td><td><strong>Precio: ₡</strong><a id=\"prec" + cont + "\">" + a.precio + "</a><br/>&nbsp;" +
                    "<strong>Cantidad: </strong><input type = \"number\" id=\"num" + cont + "\" min=\"0\" value= \"1\" style=\"width:50px;\" />" +
-                   "<button id=\"mas" + cont + "\" onclick=\"Sum('num" + cont + "','prec" + cont + "','sub" + cont + "')\" style = \"width:30px\">+</button>" +
-                   "<button id=\"men" + cont + "\" onclick=\"Rest('num" + cont + "','prec" + cont + "','sub" + cont + "')\" style=\"width:30px\">-</button>" +
-                   "<br /><br /><strong>Subtotal: </strong><a id=\"sub" + cont + "\">" + a.precio + "</a></td></tr>";
+                   "<button id=\"mas" + cont + "\" onclick=\"Sum('num" + cont + "','prec" + cont + "','sub" + cont + "')\" style=\"width:30px;\">+</button>&nbsp;" +
+                   "<button id=\"men" + cont + "\" onclick=\"Rest('num" + cont + "','prec" + cont + "','sub" + cont + "')\" style=\"width:30px;\">-</button>" +
+                   " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+
+                   "<button id=\"Elim"+cont+"\" onclick=\"Elim('"+a.path+ "')\" style=\"width:30px; background:red; width:30px;\"> X </button> " +
+                   "<br /><br /><strong>Subtotal: ₡</strong><a id=\"sub" + cont + "\">" + a.precio + "</a></td></tr>";
                     cont += 1;
                     total += a.precio;
                 }
@@ -62,7 +64,6 @@ namespace UI
        
         protected void btnCanc_Click(object sender, EventArgs e)
         {
-            Page.ClientScript.RegisterStartupScript(this.GetType(), "Cancelar", "Cancel()", true);
             m.IniciarLista();
             SubtotalCompra.Text = "0";
             IVA.Text = "0";
@@ -106,9 +107,15 @@ namespace UI
                  "<input  class=\"form-control\" id =\"tel\" style=\"width:50%;\"/>" +
                 "<label class=\"form-label\" for=\"tnombre\" > Correo:</label>" +
                "<input id=\"txtNombre\" class =\"form-control\" style=\"width:50%;\"/></div></div>" +
-            " <asp:Button ID=\"Button54\" runat=\"server\" OnClick =\"Pago()\" Class=\"btn\">Pagar</asp:Button>" +
+            "<asp:Button ID=\"Button54\" runat=\"server\" OnClick =\"Pago()\" Class=\"btn\">Pagar</asp:Button>" +
              "<asp:Button ID=\"Button20\" runat=\"server\" OnClick =\"btnCanc_Click\" Class=\"btn\">Cancelar</asp:Button>";
 
+        }
+
+        [System.Web.Services.WebMethod]
+        public static void ElimClick(string dir)
+        {
+            m.ElimiArt(dir);
         }
     }
     

@@ -78,15 +78,36 @@
              <asp:Literal runat="server" ID="pagoliteral"></asp:Literal>
          </div>
         </div> 
+    <script type="text/javascript">
+        function Elim(p) {
+            alert("Entra!")
+            $.ajax({
+                type: "POST",
+                url: '/Carrito.aspx/ElimClick',
+                data: '{dir:' + p + '}',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: true,
+                success: function () {
+                    alert("Artículo eliminado");
+                    location.reload();
+                },
+                error: function () {
+                    alert("Error al eliminar el artículo");
+                }
+            });
+        }
+    </script>
+
+     <script type="text/javascript">
+         function CargarNumeros() {
+             var cod = localStorage.getItem("Cant");
+             document.getElementById("num1").value = cod;
+
+         }
+    </script>
      <script type="text/javascript">
          function Pago() {
-             Swal.fire({
-                 position: 'top-end',
-                 type: 'success',
-                 title: 'Pago Realizado. Gracias por su compra.',
-                 showConfirmButton: false,
-                 timer: 5500
-             });
              alert("Pago Realizado. Gracias por su compra.");
              location.href = "PaginaInicio.aspx";
          }
@@ -94,13 +115,8 @@
 </script>
     <script>
         function Cancel() {
-             Swal.fire({
-                 title: 'Gracias por visitarnos.',
-                 showConfirmButton: true,
-                 timer: 6500
-             });
              alert("Gracias por visitarnos");
-            // location.href = "PaginaInicio.aspx";
+             location.href = "PaginaInicio.aspx";
          }
 
 </script>
@@ -112,11 +128,12 @@
             var t = parseInt(su) * parseInt(prec);
             document.getElementById("" + cant + "").value = su;
             document.getElementById("" + subtotal + "").innerHTML = t;
-            SumTotal(prec);
+            localStorage.setItem('Cant', su);
+            SumTotal(prec); 
             
         }
     </script>
-    <script type="text/javascript">
+    <script>
         function SumTotal(precio) {
             var subtotal = document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML;
             var nuevoSub = parseInt(subtotal) + parseInt(precio);
@@ -126,7 +143,7 @@
             var env = document.getElementById('<%=Envio.ClientID%>').innerHTML;
             var tot = parseInt(nuevoSub) + parseInt(impIVA) + parseInt(env);
             document.getElementById('<%=totComp.ClientID%>').innerHTML = tot;
-            return false;
+           
         }
         
     </script>
@@ -137,7 +154,7 @@
             if (cantid === "0") {
                 var su = "0";
                 var t = "0";
-                ResTotal(su);
+               ResTotal(su);
             } else {
                 var su = parseInt(cantid) - parseInt(1);
                 var t = parseInt(su) * parseInt(prec);
@@ -147,8 +164,8 @@
             document.getElementById("" + subtotal + "").innerHTML = t;
         }
     </script>
-    <script type="text/javascript">
-        function ResTotal(precio) {
+    <script>
+     function ResTotal(precio) {
             if (precio !== "0") {
                 var subtotal = document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML;
                 var nuevoSub = parseInt(subtotal) - parseInt(precio);
