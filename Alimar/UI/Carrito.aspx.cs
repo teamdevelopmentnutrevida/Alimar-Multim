@@ -10,61 +10,72 @@ namespace UI
 {
     public partial class Carrito : System.Web.UI.Page
     {
-        List<articulo> ListaCarrito = new List<articulo>();
+       public static List<Compra> listaCompra;
         double total = 0;
         public static ManejadorCarrito m = new ManejadorCarrito();
         protected void Page_Load(object sender, EventArgs e)
         {
-            
-            if (IsPostBack)
-            {
-                //Page.ClientScript.RegisterStartupScript(this.GetType(), "prueba", "CargarNumeros()", true);
-            }
-            else { 
-                ListaCarrito = m.getLista();
-                CargarTabla();
-            }
+            CargarTabla();
         }
 
 
         public void CargarTabla()
         {
-           
+            listaCompra = m.getListaCompra();
+            litTabla.Text = "";
             int cont = 1;
-            if (ListaCarrito != null)
+            if(listaCompra != null)
             {
-                foreach (articulo a in ListaCarrito)
+                foreach(Compra c in listaCompra)
                 {
-                    litTabla.Text += "<tr><td><h6><strong>" + a.nombre + "</strong></h6>" +
-                    "<asp:Image ID=\"imgProd" + cont + "\" runat=\"server\" src= \"../" + a.path + "\" style=\"width:125px; height:100px;\"/>" +
-                    "</td><td><strong>Precio: ₡</strong><a id=\"prec" + cont + "\">" + a.precio + "</a><br/>&nbsp;" +
-                   "<strong>Cantidad: </strong><input type = \"number\" id=\"num" + cont + "\" min=\"0\" value= \"1\" style=\"width:50px;\" />" +
-                   "<button id=\"mas" + cont + "\" onclick=\"Sum('num" + cont + "','prec" + cont + "','sub" + cont + "')\" style=\"width:30px;\">+</button>&nbsp;" +
+                    double sub = c.articulo.precio * c.cantidad;
+                    litTabla.Text += "<tr><td><h6><strong>" + c.articulo.nombre + "</strong></h6>" +
+                    "<asp:Image ID=\"imgProd" + cont + "\" runat=\"server\" src= \"../" + c.articulo.path + "\" style=\"width:125px; height:100px;\"/>" +
+                    "</td><td><strong>Precio: ₡</strong><a id=\"prec" + cont + "\">" + c.articulo.precio + "</a><br/>&nbsp;" +
+                   "<strong>Cantidad: </strong><input type = \"number\" id=\"num" + cont + "\" min=\"0\" value= \""+c.cantidad+"\" style=\"width:50px;\" />" +
+                   "<button id=\"mas" + cont + "\" onclick=\"Sum('"+c.articulo.path+"')\" style=\"width:30px;\">+</button>&nbsp;" +
                    "<button id=\"men" + cont + "\" onclick=\"Rest('num" + cont + "','prec" + cont + "','sub" + cont + "')\" style=\"width:30px;\">-</button>" +
-                   " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"+
-                   "<button id=\"Elim"+cont+"\" onclick=\"Elim('"+a.path+ "')\" style=\"width:30px; background:red; width:30px;\"> X </button> " +
-                   "<br /><br /><strong>Subtotal: ₡</strong><a id=\"sub" + cont + "\">" + a.precio + "</a></td></tr>";
+                   " &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;" +
+                   "<button id=\"Elim" + cont + "\" onclick=\"Elim('" + c.articulo.path + "')\" style=\"width:30px; background:red; width:30px;\"> X </button> " +
+                   "<br /><br /><strong>Subtotal: ₡</strong><a id=\"sub" + cont + "\">" + sub + "</a></td></tr>";
                     cont += 1;
-                    total += a.precio;
+                    
                 }
                 CargarTotal(total);
             }
+            
+        }
+
+        [System.Web.Services.WebMethod]
+        public static void SumArtic(string pdir)
+        {
+            m.Sumar(pdir);
+        }
+        [System.Web.Services.WebMethod]
+        public static void RestArtic(string pdir)
+        {
+            m.Restar(pdir);
         }
 
         private void CargarTotal(double total)
         {
-            SubtotalCompra.Text = total + "";
-            double imp = ((total * 13) / 100);
-            IVA.Text = imp + "";
+            double precT = 0;
+            foreach(Compra c in listaCompra)
+            {
+                precT += (c.articulo.precio * c.cantidad);
+            }
+            SubtotalCompra.Text = precT +"";
+            double imp = ((precT * 13) / 100);
+            IVA.Text = imp +"";
             Envio.Text = 3000 + "";
-            totComp.Text = (total + imp + 3000) + "";
+            totComp.Text = (precT + imp + 3000) + "";
         }
 
 
        
         protected void btnCanc_Click(object sender, EventArgs e)
         {
-            m.IniciarLista();
+            m.restaurarLista();
             SubtotalCompra.Text = "0";
             IVA.Text = "0";
             Envio.Text = "0";
@@ -109,13 +120,12 @@ namespace UI
                "<input id=\"txtNombre\" class =\"form-control\" style=\"width:50%;\"/></div></div>" +
             "<asp:Button ID=\"Button54\" runat=\"server\" OnClick =\"Pago()\" Class=\"btn\">Pagar</asp:Button>" +
              "<asp:Button ID=\"Button20\" runat=\"server\" OnClick =\"btnCanc_Click\" Class=\"btn\">Cancelar</asp:Button>";
-
         }
 
         [System.Web.Services.WebMethod]
         public static void ElimClick(string dir)
         {
-            m.ElimiArt(dir);
+            m.EliminarArtCompra(dir);
         }
     }
     

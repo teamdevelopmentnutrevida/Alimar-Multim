@@ -80,11 +80,12 @@
         </div> 
     <script type="text/javascript">
         function Elim(p) {
-            alert("Entra!")
+            alert("Entra!");
+            var param = "{'dir':' "+ p +" '}";
             $.ajax({
                 type: "POST",
                 url: '/Carrito.aspx/ElimClick',
-                data: '{dir:' + p + '}',
+                data: param,
                 contentType: "application/json; charset=utf-8",
                 dataType: "json",
                 async: true,
@@ -120,66 +121,46 @@
          }
 
 </script>
-    <script >
-        function Sum(cant, precio, subtotal) {
-            var cantid = document.getElementById("" + cant + "").value;
-            var prec = document.getElementById("" + precio + "").innerHTML;
-            var su = parseInt(cantid)+ parseInt(1);
-            var t = parseInt(su) * parseInt(prec);
-            document.getElementById("" + cant + "").value = su;
-            document.getElementById("" + subtotal + "").innerHTML = t;
-            localStorage.setItem('Cant', su);
-            SumTotal(prec); 
-            
+
+    <script type="text/javascript">
+        function Sum(num) {
+            var param = "{'pdir':' "+ num +" '}";
+            $.ajax({
+                type: "POST",
+                url: '/Carrito.aspx/SumArtic',
+                data: param,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: true,
+                success: function () {
+                    alert("Artículo Agregado");
+                },
+                error: function () {
+                    alert("Error al agregar el artículo");
+                }
+            });
         }
     </script>
-    <script>
-        function SumTotal(precio) {
-            var subtotal = document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML;
-            var nuevoSub = parseInt(subtotal) + parseInt(precio);
-            document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML = nuevoSub;
-            var impIVA = (parseInt(nuevoSub) * parseInt(13)) / parseInt(100);
-            document.getElementById('<%=IVA.ClientID%>').innerHTML = impIVA;
-            var env = document.getElementById('<%=Envio.ClientID%>').innerHTML;
-            var tot = parseInt(nuevoSub) + parseInt(impIVA) + parseInt(env);
-            document.getElementById('<%=totComp.ClientID%>').innerHTML = tot;
-           
-        }
-        
-    </script>
-    <script>
-        function Rest(cant, precio, subtotal) {
-            var cantid = document.getElementById("" + cant + "").value;
-            var prec = document.getElementById("" + precio + "").innerHTML;
-            if (cantid === "0") {
-                var su = "0";
-                var t = "0";
-               ResTotal(su);
-            } else {
-                var su = parseInt(cantid) - parseInt(1);
-                var t = parseInt(su) * parseInt(prec);
-                ResTotal(prec);
-            }
-            document.getElementById("" + cant + "").value = su;
-            document.getElementById("" + subtotal + "").innerHTML = t;
+     <script type="text/javascript">
+        function Rest(num) {
+            var param = "{'pdir':' "+ num +" '}";
+            $.ajax({
+                type: "POST",
+                url: '/Carrito.aspx/RestArtic',
+                data: param,
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: true,
+                success: function () {
+                    alert("Artículo Agregado");
+                   // location.reload();
+                },
+                error: function () {
+                    alert("Error al agregar el artículo");
+                }
+            });
         }
     </script>
-    <script>
-     function ResTotal(precio) {
-            if (precio !== "0") {
-                var subtotal = document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML;
-                var nuevoSub = parseInt(subtotal) - parseInt(precio);
-                document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML = nuevoSub;
-                var impIVA = (parseInt(nuevoSub) * parseInt(13)) / parseInt(100);
-                document.getElementById('<%=IVA.ClientID%>').innerHTML = impIVA;
-                var env = document.getElementById('<%=Envio.ClientID%>').innerHTML;
-                var tot = parseInt(nuevoSub) + parseInt(impIVA) + parseInt(env);
-                document.getElementById('<%=totComp.ClientID%>').innerHTML = tot;
-            } else {
-                document.getElementById('<%=SubtotalCompra.ClientID%>').innerHTML = "0";
-                document.getElementById('<%=IVA.ClientID%>').innerHTML = "0";
-                document.getElementById('<%=totComp.ClientID%>').innerHTML = "0";
-            }
-        }
-    </script>
+   
+    
 </asp:Content>

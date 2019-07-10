@@ -9,34 +9,73 @@ namespace BL
     public class ManejadorCarrito
     {
         public static List<articulo> lista= new List<articulo>();
+        public static List<Compra> lisCompra = new List<Compra>();
 
-        public List<articulo> getLista()
+        public List<Compra> getListaCompra()
         {
-            return lista;
+            return lisCompra;
+        }
+        public void AgregarListaCompra(articulo art, int cant)
+        {
+            lisCompra.Add(new Compra(art, cant));
         }
 
+        public void Sumar(string pat)
+        {
+            foreach (Compra c in lisCompra)
+            {
+                string p = c.articulo.path;
+                if (p.CompareTo(pat) >= 0)
+                {
+                    int cant = c.cantidad;
+                    c.cantidad = cant + 1;
+                }
+            }
+        }
+        public void Restar(string pat)
+        {
+            foreach (Compra c in lisCompra)
+            {
+                string p = c.articulo.path;
+                if (p.CompareTo(pat) >= 0)
+                {
+                    if(c.cantidad >= 1)
+                    {
+                        int cant = c.cantidad;
+                        c.cantidad = cant - 1;
+                    }
+                }
+            }
+        }
+
+        public void restaurarLista()
+        {
+            lisCompra = new List<Compra>();
+        }
+
+        public void EliminarArtCompra(string cod)
+        {
+            
+            foreach (Compra c in lisCompra)
+            {
+                string p = c.articulo.path;
+                if (p.CompareTo(cod) >= 0)
+                {
+                    lisCompra.Remove(c);
+                }
+            }
+        }
+
+        
         public void AgregarArticulo(articulo a)
         {
             if(a != null)
             {
-                lista.Add(a);
+                lisCompra.Add(new Compra(a,1));
             }
         }
-        public void IniciarLista()
-        {
-            lista = new List<articulo>();
-        }
+        
 
-        public void ElimiArt(string path)
-        {
-            foreach (articulo a in lista)
-            {
-                if (a.path.Equals(path))
-                {
-                    lista.Remove(a);
-
-                }
-            }
-        }
+        
     }
 }
