@@ -23,7 +23,7 @@
 						<div class="promo_image">
 							<a href="Producto.aspx?Valor=RopaAlimar/blusa.jpg"><img src="RopaAlimar/blusa.jpg" alt=""></a>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a  href="Producto.aspx?Valor=RopaAlimar/blusa.jpg">Comprar ahora</a></div>
 					</div>
 				</div>
 
@@ -33,7 +33,7 @@
 						<div class="promo_image">
                             <a href="Producto.aspx?Valor=RopaAlimar/PantalonMujer.jpg"><img src="RopaAlimar/PantalonMujer.jpg" alt=""></a>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/PantalonMujer.jpg">Comprar ahora</a></div>
 					</div>
 				</div>
 
@@ -43,7 +43,7 @@
 						<div class="promo_image">
                             <a href="Producto.aspx?Valor=RopaAlimar/shortMujer.jpg"><img src="RopaAlimar/shortMujer.jpg" alt=""></a>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/shortMujer.jpg">Comprar ahora</a></div>
 					</div>
 				</div>
 
@@ -53,7 +53,7 @@
 						<div class="promo_image">
                              <a href="Producto.aspx?Valor=RopaAlimar/TrajeBaño1.jpg"><img src="RopaAlimar/TrajeBaño1.jpg" alt=""></a>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/TrajeBaño1.jpg">Comprar ahora</a></div>
 					</div>
 				</div>
 
@@ -63,7 +63,7 @@
 						<div class="promo_image">
                             <a href="Producto.aspx?Valor=RopaAlimar/TrajeBaño2.jpeg"><img src="RopaAlimar/TrajeBaño2.jpeg" alt=""></a>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/TrajeBaño2.jpeg">Comprar ahora</a></div>
 					</div>
 				</div>
 
@@ -73,7 +73,7 @@
 						<div class="promo_image">
                             <a href="Producto.aspx?Valor=RopaAlimar/deportiva 1.jpg"><img src="RopaAlimar/deportiva 1.jpg" alt=""></a>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/deportiva 1.jpg">Comprar ahora</a></div>
 					</div>
 				</div>
                
@@ -83,7 +83,7 @@
 						<div class="promo_image">
                             <a href="Producto.aspx?Valor=RopaAlimar/deportiva 2.jpg"><img src="RopaAlimar/deportiva 2.jpg" alt=""></a>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/deportiva 2.jpg">Comprar ahora</a></div>
 					</div>
 				</div>
 
@@ -93,7 +93,7 @@
 						<div class="promo_image">
                             <a href="Producto.aspx?Valor=RopaAlimar/Pijama1.jpg"><img src="RopaAlimar/Pijama1.jpg" alt=""></a>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/Pijama1.jpg">Comprar ahora</a></div>
 					</div>
 				</div>
 
@@ -103,7 +103,7 @@
 						<div class="promo_image">
                             <a href="Producto.aspx?Valor=RopaAlimar/Pijama2.jpg"><img src="RopaAlimar/Pijama2.jpg" alt=""></a>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/Pijama2.jpg">Comprar ahora</a></div>
 					</div>
 				</div>
 
@@ -113,7 +113,7 @@
 						<div class="promo_image">
                              <a href="Producto.aspx?Valor=RopaAlimar/vestido.jpg"><img src="RopaAlimar/vestido.jpg" alt=""></a>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/vestido.jpg">Comprar ahora</a></div>
 					</div>
 				</div>
 
@@ -123,7 +123,7 @@
 						<div class="promo_image">
                             <a href="Producto.aspx?Valor=RopaAlimar/vestido 2.jpg"><img src="RopaAlimar/vestido 2.jpg" alt=""></a>
 						</div>
-						<div class="promo_link"><a href="#">Comprar ahora</a></div>
+						<div class="promo_link"><a href="Producto.aspx?Valor=RopaAlimar/vestido 2.jpg">Comprar ahora</a></div>
 					</div>
 				</div>
 

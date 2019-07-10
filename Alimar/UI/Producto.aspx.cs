@@ -33,7 +33,7 @@ namespace UI
 
             lbHead.Text = artic.nombre;
             imgProducto.ImageUrl = artic.path;
-            lbPrecio.Text = artic.precio + "";
+            lbPrecio.Text = "₡" + artic.precio;
             lbDescripcion.Text = artic.descipcion;
             lbGenero.Text = artic.genero;
 
