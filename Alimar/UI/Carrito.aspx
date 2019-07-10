@@ -78,25 +78,34 @@
              <asp:Literal runat="server" ID="pagoliteral"></asp:Literal>
          </div>
         </div> 
-    
-                  <script type="text/javascript">
-                      function Elim(path) {
-                             $.ajax({
-                                type: "POST",
-                                url: '/Carrito.aspx/Elim_Click',
-                                data: '{s:' + path + '}',
-                                contentType: "application/json; charset=utf-8",
-                                dataType: "json",
-                                async: true,
-                                success: function () {
-                                    location.reload();
-                                },
-                                error: function () {
-                                    alert("Error al Eliminar el articulo");
-                                }
-                             });
-                      }
-                </script>
+    <script type="text/javascript">
+        function Elim(p) {
+            alert("Entra!")
+            $.ajax({
+                type: "POST",
+                url: '/Carrito.aspx/ElimClick',
+                data: '{dir:' + p + '}',
+                contentType: "application/json; charset=utf-8",
+                dataType: "json",
+                async: true,
+                success: function () {
+                    alert("Artículo eliminado");
+                    location.reload();
+                },
+                error: function () {
+                    alert("Error al eliminar el artículo");
+                }
+            });
+        }
+    </script>
+
+     <script type="text/javascript">
+         function CargarNumeros() {
+             var cod = localStorage.getItem("Cant");
+             document.getElementById("num1").value = cod;
+
+         }
+    </script>
      <script type="text/javascript">
          function Pago() {
              alert("Pago Realizado. Gracias por su compra.");
@@ -119,7 +128,9 @@
             var t = parseInt(su) * parseInt(prec);
             document.getElementById("" + cant + "").value = su;
             document.getElementById("" + subtotal + "").innerHTML = t;
-            SumTotal(prec);  
+            localStorage.setItem('Cant', su);
+            SumTotal(prec); 
+            
         }
     </script>
     <script>
@@ -132,7 +143,7 @@
             var env = document.getElementById('<%=Envio.ClientID%>').innerHTML;
             var tot = parseInt(nuevoSub) + parseInt(impIVA) + parseInt(env);
             document.getElementById('<%=totComp.ClientID%>').innerHTML = tot;
-            return false;
+           
         }
         
     </script>
