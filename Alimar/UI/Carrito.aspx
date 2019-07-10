@@ -89,7 +89,7 @@
                 dataType: "json",
                 async: true,
                 success: function () {
-                    alert("Artículo eliminado");
+                    //alert("Artículo eliminado");
                     location.reload();
                 },
                 error: function () {
@@ -132,10 +132,10 @@
                 dataType: "json",
                 async: true,
                 success: function () {
-                    alert("Artículo Agregado");
+                   // alert("Artículo Agregado");
                 },
                 error: function () {
-                    alert("Error al agregar el artículo");
+                    alert("Error al restar el artículo");
                 }
             });
         }
@@ -151,7 +151,7 @@
                 dataType: "json",
                 async: true,
                 success: function () {
-                    alert("Artículo Agregado");
+                    //alert("Artículo Agregado");
                    // location.reload();
                 },
                 error: function () {
